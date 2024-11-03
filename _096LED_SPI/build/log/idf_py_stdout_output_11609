@@ -1,0 +1,602 @@
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/_096LED_SPI.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/_096LED_SPI.c.obj 
+/home/ep_hdy/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.3\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/ep_hdy/Code/ESP32/_096LED_SPI/build/config -I/home/ep_hdy/Code/ESP32/_096LED_SPI/main -I/home/ep_hdy/esp/esp-idf/components/newlib/platform_include -I/home/ep_hdy/esp/esp-idf/components/freertos/config/include -I/home/ep_hdy/esp/esp-idf/components/freertos/config/include/freertos -I/home/ep_hdy/esp/esp-idf/components/freertos/config/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/ep_hdy/esp/esp-idf/components/freertos/esp_additions/include -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include/soc -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/ep_hdy/esp/esp-idf/components/heap/include -I/home/ep_hdy/esp/esp-idf/components/log/include -I/home/ep_hdy/esp/esp-idf/components/soc/include -I/home/ep_hdy/esp/esp-idf/components/soc/esp32 -I/home/ep_hdy/esp/esp-idf/components/soc/esp32/include -I/home/ep_hdy/esp/esp-idf/components/hal/platform_port/include -I/home/ep_hdy/esp/esp-idf/components/hal/esp32/include -I/home/ep_hdy/esp/esp-idf/components/hal/include -I/home/ep_hdy/esp/esp-idf/components/esp_rom/include -I/home/ep_hdy/esp/esp-idf/components/esp_rom/include/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_rom/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_common/include -I/home/ep_hdy/esp/esp-idf/components/esp_system/include -I/home/ep_hdy/esp/esp-idf/components/esp_system/port/soc -I/home/ep_hdy/esp/esp-idf/components/esp_system/port/include/private -I/home/ep_hdy/esp/esp-idf/components/xtensa/esp32/include -I/home/ep_hdy/esp/esp-idf/components/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/xtensa/deprecated_include -I/home/ep_hdy/esp/esp-idf/components/lwip/include -I/home/ep_hdy/esp/esp-idf/components/lwip/include/apps -I/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/sntp -I/home/ep_hdy/esp/esp-idf/components/lwip/lwip/src/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/freertos/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/ep_hdy/esp/esp-idf/components/esp_ringbuf/include -I/home/ep_hdy/esp/esp-idf/components/efuse/include -I/home/ep_hdy/esp/esp-idf/components/efuse/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_mm/include -I/home/ep_hdy/esp/esp-idf/components/driver/include -I/home/ep_hdy/esp/esp-idf/components/driver/deprecated -I/home/ep_hdy/esp/esp-idf/components/driver/analog_comparator/include -I/home/ep_hdy/esp/esp-idf/components/driver/dac/include -I/home/ep_hdy/esp/esp-idf/components/driver/gpio/include -I/home/ep_hdy/esp/esp-idf/components/driver/gptimer/include -I/home/ep_hdy/esp/esp-idf/components/driver/i2c/include -I/home/ep_hdy/esp/esp-idf/components/driver/i2s/include -I/home/ep_hdy/esp/esp-idf/components/driver/ledc/include -I/home/ep_hdy/esp/esp-idf/components/driver/mcpwm/include -I/home/ep_hdy/esp/esp-idf/components/driver/parlio/include -I/home/ep_hdy/esp/esp-idf/components/driver/pcnt/include -I/home/ep_hdy/esp/esp-idf/components/driver/rmt/include -I/home/ep_hdy/esp/esp-idf/components/driver/sdio_slave/include -I/home/ep_hdy/esp/esp-idf/components/driver/sdmmc/include -I/home/ep_hdy/esp/esp-idf/components/driver/sigma_delta/include -I/home/ep_hdy/esp/esp-idf/components/driver/spi/include -I/home/ep_hdy/esp/esp-idf/components/driver/temperature_sensor/include -I/home/ep_hdy/esp/esp-idf/components/driver/touch_sensor/include -I/home/ep_hdy/esp/esp-idf/components/driver/twai/include -I/home/ep_hdy/esp/esp-idf/components/driver/uart/include -I/home/ep_hdy/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/ep_hdy/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_pm/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/port/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/ep_hdy/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/ep_hdy/esp/esp-idf/components/esp_bootloader_format/include -I/home/ep_hdy/esp/esp-idf/components/esp_app_format/include -I/home/ep_hdy/esp/esp-idf/components/bootloader_support/include -I/home/ep_hdy/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/ep_hdy/esp/esp-idf/components/esp_partition/include -I/home/ep_hdy/esp/esp-idf/components/app_update/include -I/home/ep_hdy/esp/esp-idf/components/spi_flash/include -I/home/ep_hdy/esp/esp-idf/components/pthread/include -I/home/ep_hdy/esp/esp-idf/components/esp_timer/include -I/home/ep_hdy/esp/esp-idf/components/app_trace/include -I/home/ep_hdy/esp/esp-idf/components/esp_event/include -I/home/ep_hdy/esp/esp-idf/components/nvs_flash/include -I/home/ep_hdy/esp/esp-idf/components/esp_phy/include -I/home/ep_hdy/esp/esp-idf/components/esp_phy/esp32/include -I/home/ep_hdy/esp/esp-idf/components/vfs/include -I/home/ep_hdy/esp/esp-idf/components/esp_netif/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/port/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/ep_hdy/esp/esp-idf/components/esp_coex/include -I/home/ep_hdy/esp/esp-idf/components/esp_wifi/include -I/home/ep_hdy/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/ep_hdy/esp/esp-idf/components/unity/include -I/home/ep_hdy/esp/esp-idf/components/unity/unity/src -I/home/ep_hdy/esp/esp-idf/components/cmock/CMock/src -I/home/ep_hdy/esp/esp-idf/components/console -I/home/ep_hdy/esp/esp-idf/components/http_parser -I/home/ep_hdy/esp/esp-idf/components/esp-tls -I/home/ep_hdy/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/ep_hdy/esp/esp-idf/components/esp_adc/include -I/home/ep_hdy/esp/esp-idf/components/esp_adc/interface -I/home/ep_hdy/esp/esp-idf/components/esp_adc/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_adc/deprecated/include -I/home/ep_hdy/esp/esp-idf/components/esp_eth/include -I/home/ep_hdy/esp/esp-idf/components/esp_gdbstub/include -I/home/ep_hdy/esp/esp-idf/components/esp_hid/include -I/home/ep_hdy/esp/esp-idf/components/tcp_transport/include -I/home/ep_hdy/esp/esp-idf/components/esp_http_client/include -I/home/ep_hdy/esp/esp-idf/components/esp_http_server/include -I/home/ep_hdy/esp/esp-idf/components/esp_https_ota/include -I/home/ep_hdy/esp/esp-idf/components/esp_psram/include -I/home/ep_hdy/esp/esp-idf/components/esp_lcd/include -I/home/ep_hdy/esp/esp-idf/components/esp_lcd/interface -I/home/ep_hdy/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/common -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/security -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/transports -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/crypto/srp6a -I/home/ep_hdy/esp/esp-idf/components/protocomm/proto-c -I/home/ep_hdy/esp/esp-idf/components/esp_local_ctrl/include -I/home/ep_hdy/esp/esp-idf/components/espcoredump/include -I/home/ep_hdy/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/ep_hdy/esp/esp-idf/components/wear_levelling/include -I/home/ep_hdy/esp/esp-idf/components/sdmmc/include -I/home/ep_hdy/esp/esp-idf/components/fatfs/diskio -I/home/ep_hdy/esp/esp-idf/components/fatfs/src -I/home/ep_hdy/esp/esp-idf/components/fatfs/vfs -I/home/ep_hdy/esp/esp-idf/components/idf_test/include -I/home/ep_hdy/esp/esp-idf/components/idf_test/include/esp32 -I/home/ep_hdy/esp/esp-idf/components/ieee802154/include -I/home/ep_hdy/esp/esp-idf/components/json/cJSON -I/home/ep_hdy/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/ep_hdy/esp/esp-idf/components/nvs_sec_provider/include -I/home/ep_hdy/esp/esp-idf/components/perfmon/include -I/home/ep_hdy/esp/esp-idf/components/spiffs/include -I/home/ep_hdy/esp/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/ep_hdy/Code/ESP32/_096LED_SPI=. -fmacro-prefix-map=/home/ep_hdy/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/_096LED_SPI.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/_096LED_SPI.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/_096LED_SPI.c.obj -c /home/ep_hdy/Code/ESP32/_096LED_SPI/main/_096LED_SPI.c
+/home/ep_hdy/Code/ESP32/_096LED_SPI/main/_096LED_SPI.c: In function 'app_main':
+/home/ep_hdy/Code/ESP32/_096LED_SPI/main/_096LED_SPI.c:14:5: error: implicit declaration of function 'oled_witre_char' [-Werror=implicit-function-declaration]
+   14 |     oled_witre_char(0,0,'a');
+      |     ^~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+[2/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/OLED_SPI.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/OLED_SPI.c.obj 
+/home/ep_hdy/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.3\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/ep_hdy/Code/ESP32/_096LED_SPI/build/config -I/home/ep_hdy/Code/ESP32/_096LED_SPI/main -I/home/ep_hdy/esp/esp-idf/components/newlib/platform_include -I/home/ep_hdy/esp/esp-idf/components/freertos/config/include -I/home/ep_hdy/esp/esp-idf/components/freertos/config/include/freertos -I/home/ep_hdy/esp/esp-idf/components/freertos/config/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/ep_hdy/esp/esp-idf/components/freertos/esp_additions/include -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include/soc -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/ep_hdy/esp/esp-idf/components/heap/include -I/home/ep_hdy/esp/esp-idf/components/log/include -I/home/ep_hdy/esp/esp-idf/components/soc/include -I/home/ep_hdy/esp/esp-idf/components/soc/esp32 -I/home/ep_hdy/esp/esp-idf/components/soc/esp32/include -I/home/ep_hdy/esp/esp-idf/components/hal/platform_port/include -I/home/ep_hdy/esp/esp-idf/components/hal/esp32/include -I/home/ep_hdy/esp/esp-idf/components/hal/include -I/home/ep_hdy/esp/esp-idf/components/esp_rom/include -I/home/ep_hdy/esp/esp-idf/components/esp_rom/include/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_rom/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_common/include -I/home/ep_hdy/esp/esp-idf/components/esp_system/include -I/home/ep_hdy/esp/esp-idf/components/esp_system/port/soc -I/home/ep_hdy/esp/esp-idf/components/esp_system/port/include/private -I/home/ep_hdy/esp/esp-idf/components/xtensa/esp32/include -I/home/ep_hdy/esp/esp-idf/components/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/xtensa/deprecated_include -I/home/ep_hdy/esp/esp-idf/components/lwip/include -I/home/ep_hdy/esp/esp-idf/components/lwip/include/apps -I/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/sntp -I/home/ep_hdy/esp/esp-idf/components/lwip/lwip/src/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/freertos/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/ep_hdy/esp/esp-idf/components/esp_ringbuf/include -I/home/ep_hdy/esp/esp-idf/components/efuse/include -I/home/ep_hdy/esp/esp-idf/components/efuse/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_mm/include -I/home/ep_hdy/esp/esp-idf/components/driver/include -I/home/ep_hdy/esp/esp-idf/components/driver/deprecated -I/home/ep_hdy/esp/esp-idf/components/driver/analog_comparator/include -I/home/ep_hdy/esp/esp-idf/components/driver/dac/include -I/home/ep_hdy/esp/esp-idf/components/driver/gpio/include -I/home/ep_hdy/esp/esp-idf/components/driver/gptimer/include -I/home/ep_hdy/esp/esp-idf/components/driver/i2c/include -I/home/ep_hdy/esp/esp-idf/components/driver/i2s/include -I/home/ep_hdy/esp/esp-idf/components/driver/ledc/include -I/home/ep_hdy/esp/esp-idf/components/driver/mcpwm/include -I/home/ep_hdy/esp/esp-idf/components/driver/parlio/include -I/home/ep_hdy/esp/esp-idf/components/driver/pcnt/include -I/home/ep_hdy/esp/esp-idf/components/driver/rmt/include -I/home/ep_hdy/esp/esp-idf/components/driver/sdio_slave/include -I/home/ep_hdy/esp/esp-idf/components/driver/sdmmc/include -I/home/ep_hdy/esp/esp-idf/components/driver/sigma_delta/include -I/home/ep_hdy/esp/esp-idf/components/driver/spi/include -I/home/ep_hdy/esp/esp-idf/components/driver/temperature_sensor/include -I/home/ep_hdy/esp/esp-idf/components/driver/touch_sensor/include -I/home/ep_hdy/esp/esp-idf/components/driver/twai/include -I/home/ep_hdy/esp/esp-idf/components/driver/uart/include -I/home/ep_hdy/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/ep_hdy/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_pm/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/port/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/ep_hdy/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/ep_hdy/esp/esp-idf/components/esp_bootloader_format/include -I/home/ep_hdy/esp/esp-idf/components/esp_app_format/include -I/home/ep_hdy/esp/esp-idf/components/bootloader_support/include -I/home/ep_hdy/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/ep_hdy/esp/esp-idf/components/esp_partition/include -I/home/ep_hdy/esp/esp-idf/components/app_update/include -I/home/ep_hdy/esp/esp-idf/components/spi_flash/include -I/home/ep_hdy/esp/esp-idf/components/pthread/include -I/home/ep_hdy/esp/esp-idf/components/esp_timer/include -I/home/ep_hdy/esp/esp-idf/components/app_trace/include -I/home/ep_hdy/esp/esp-idf/components/esp_event/include -I/home/ep_hdy/esp/esp-idf/components/nvs_flash/include -I/home/ep_hdy/esp/esp-idf/components/esp_phy/include -I/home/ep_hdy/esp/esp-idf/components/esp_phy/esp32/include -I/home/ep_hdy/esp/esp-idf/components/vfs/include -I/home/ep_hdy/esp/esp-idf/components/esp_netif/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/port/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/ep_hdy/esp/esp-idf/components/esp_coex/include -I/home/ep_hdy/esp/esp-idf/components/esp_wifi/include -I/home/ep_hdy/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/ep_hdy/esp/esp-idf/components/unity/include -I/home/ep_hdy/esp/esp-idf/components/unity/unity/src -I/home/ep_hdy/esp/esp-idf/components/cmock/CMock/src -I/home/ep_hdy/esp/esp-idf/components/console -I/home/ep_hdy/esp/esp-idf/components/http_parser -I/home/ep_hdy/esp/esp-idf/components/esp-tls -I/home/ep_hdy/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/ep_hdy/esp/esp-idf/components/esp_adc/include -I/home/ep_hdy/esp/esp-idf/components/esp_adc/interface -I/home/ep_hdy/esp/esp-idf/components/esp_adc/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_adc/deprecated/include -I/home/ep_hdy/esp/esp-idf/components/esp_eth/include -I/home/ep_hdy/esp/esp-idf/components/esp_gdbstub/include -I/home/ep_hdy/esp/esp-idf/components/esp_hid/include -I/home/ep_hdy/esp/esp-idf/components/tcp_transport/include -I/home/ep_hdy/esp/esp-idf/components/esp_http_client/include -I/home/ep_hdy/esp/esp-idf/components/esp_http_server/include -I/home/ep_hdy/esp/esp-idf/components/esp_https_ota/include -I/home/ep_hdy/esp/esp-idf/components/esp_psram/include -I/home/ep_hdy/esp/esp-idf/components/esp_lcd/include -I/home/ep_hdy/esp/esp-idf/components/esp_lcd/interface -I/home/ep_hdy/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/common -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/security -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/transports -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/crypto/srp6a -I/home/ep_hdy/esp/esp-idf/components/protocomm/proto-c -I/home/ep_hdy/esp/esp-idf/components/esp_local_ctrl/include -I/home/ep_hdy/esp/esp-idf/components/espcoredump/include -I/home/ep_hdy/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/ep_hdy/esp/esp-idf/components/wear_levelling/include -I/home/ep_hdy/esp/esp-idf/components/sdmmc/include -I/home/ep_hdy/esp/esp-idf/components/fatfs/diskio -I/home/ep_hdy/esp/esp-idf/components/fatfs/src -I/home/ep_hdy/esp/esp-idf/components/fatfs/vfs -I/home/ep_hdy/esp/esp-idf/components/idf_test/include -I/home/ep_hdy/esp/esp-idf/components/idf_test/include/esp32 -I/home/ep_hdy/esp/esp-idf/components/ieee802154/include -I/home/ep_hdy/esp/esp-idf/components/json/cJSON -I/home/ep_hdy/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/ep_hdy/esp/esp-idf/components/nvs_sec_provider/include -I/home/ep_hdy/esp/esp-idf/components/perfmon/include -I/home/ep_hdy/esp/esp-idf/components/spiffs/include -I/home/ep_hdy/esp/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/ep_hdy/Code/ESP32/_096LED_SPI=. -fmacro-prefix-map=/home/ep_hdy/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/OLED_SPI.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/OLED_SPI.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/OLED_SPI.c.obj -c /home/ep_hdy/Code/ESP32/_096LED_SPI/main/OLED_SPI.c
+/home/ep_hdy/Code/ESP32/_096LED_SPI/main/OLED_SPI.c:50:1: error: missing braces around initializer [-Werror=missing-braces]
+   50 | {
+      | ^
+   51 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+      |         {
+   52 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,//   0
+      |                                                }
+   53 |         0x00,0x00,0x00,0xF8,0x00,0x00,0x00,0x00,
+      |         {
+   54 |         0x00,0x00,0x00,0x33,0x30,0x00,0x00,0x00,// ! 1
+      |                                                }
+   55 |         0x00,0x16,0x0E,0x00,0x16,0x0E,0x00,0x00,
+      |         {
+   56 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,// " 2
+      |                                                }
+   57 |         0x40,0xC0,0x78,0x40,0xC0,0x78,0x40,0x00,
+      |         {
+   58 |         0x04,0x3F,0x04,0x04,0x3F,0x04,0x04,0x00,// # 3
+      |                                                }
+   59 |         0x00,0x70,0x88,0xFC,0x08,0x30,0x00,0x00,
+      |         {
+   60 |         0x00,0x18,0x20,0xFF,0x21,0x1E,0x00,0x00,// $ 4
+      |                                                }
+   61 |         0xF0,0x08,0xF0,0x00,0xE0,0x18,0x00,0x00,
+      |         {
+   62 |         0x00,0x21,0x1C,0x03,0x1E,0x21,0x1E,0x00,// % 5
+      |                                                }
+   63 |         0x00,0xF0,0x08,0x88,0x70,0x00,0x00,0x00,
+      |         {
+   64 |         0x1E,0x21,0x23,0x24,0x19,0x27,0x21,0x10,// & 6
+      |                                                }
+   65 |         0x00,0x00,0x00,0x16,0x0E,0x00,0x00,0x00,
+      |         {
+   66 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,// ' 7
+      |                                                }
+   67 |         0x00,0x00,0x00,0xE0,0x18,0x04,0x02,0x00,
+      |         {
+   68 |         0x00,0x00,0x00,0x07,0x18,0x20,0x40,0x00,// ( 8
+      |                                                }
+   69 |         0x00,0x02,0x04,0x18,0xE0,0x00,0x00,0x00,
+      |         {
+   70 |         0x00,0x40,0x20,0x18,0x07,0x00,0x00,0x00,// ) 9
+      |                                                }
+   71 |         0x40,0x40,0x80,0xF0,0x80,0x40,0x40,0x00,
+      |         {
+   72 |         0x02,0x02,0x01,0x0F,0x01,0x02,0x02,0x00,// * 10
+      |                                                }
+   73 |         0x00,0x00,0x00,0xF0,0x00,0x00,0x00,0x00,
+      |         {
+   74 |         0x01,0x01,0x01,0x1F,0x01,0x01,0x01,0x00,// + 11
+      |                                                }
+   75 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+      |         {
+   76 |         0x00,0xB0,0x70,0x00,0x00,0x00,0x00,0x00,// , 12
+      |                                                }
+   77 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+      |         {
+   78 |         0x00,0x01,0x01,0x01,0x01,0x01,0x01,0x01,// - 13
+      |                                                }
+   79 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+      |         {
+   80 |         0x00,0x30,0x30,0x00,0x00,0x00,0x00,0x00,// . 14
+      |                                                }
+   81 |         0x00,0x00,0x00,0x00,0x80,0x60,0x18,0x04,
+      |         {
+   82 |         0x00,0x60,0x18,0x06,0x01,0x00,0x00,0x00,// / 15
+      |                                                }
+   83 |         0x00,0xE0,0x10,0x08,0x08,0x10,0xE0,0x00,
+      |         {
+   84 |         0x00,0x0F,0x10,0x20,0x20,0x10,0x0F,0x00,// 0 16
+      |                                                }
+   85 |         0x00,0x10,0x10,0xF8,0x00,0x00,0x00,0x00,
+      |         {
+   86 |         0x00,0x20,0x20,0x3F,0x20,0x20,0x00,0x00,// 1 17
+      |                                                }
+   87 |         0x00,0x70,0x08,0x08,0x08,0x88,0x70,0x00,
+      |         {
+   88 |         0x00,0x30,0x28,0x24,0x22,0x21,0x30,0x00,// 2 18
+      |                                                }
+   89 |         0x00,0x30,0x08,0x88,0x88,0x48,0x30,0x00,
+      |         {
+   90 |         0x00,0x18,0x20,0x20,0x20,0x11,0x0E,0x00,// 3 19
+      |                                                }
+   91 |         0x00,0x00,0xC0,0x20,0x10,0xF8,0x00,0x00,
+      |         {
+   92 |         0x00,0x07,0x04,0x24,0x24,0x3F,0x24,0x00,// 4 20
+      |                                                }
+   93 |         0x00,0xF8,0x08,0x88,0x88,0x08,0x08,0x00,
+      |         {
+   94 |         0x00,0x19,0x21,0x20,0x20,0x11,0x0E,0x00,// 5 21
+      |                                                }
+   95 |         0x00,0xE0,0x10,0x88,0x88,0x18,0x00,0x00,
+      |         {
+   96 |         0x00,0x0F,0x11,0x20,0x20,0x11,0x0E,0x00,// 6 22
+      |                                                }
+   97 |         0x00,0x38,0x08,0x08,0xC8,0x38,0x08,0x00,
+      |         {
+   98 |         0x00,0x00,0x00,0x3F,0x00,0x00,0x00,0x00,// 7 23
+      |                                                }
+   99 |         0x00,0x70,0x88,0x08,0x08,0x88,0x70,0x00,
+      |         {
+  100 |         0x00,0x1C,0x22,0x21,0x21,0x22,0x1C,0x00,// 8 24
+      |                                                }
+  101 |         0x00,0xE0,0x10,0x08,0x08,0x10,0xE0,0x00,
+      |         {
+  102 |         0x00,0x00,0x31,0x22,0x22,0x11,0x0F,0x00,// 9 25
+      |                                                }
+  103 |         0x00,0x00,0x00,0xC0,0xC0,0x00,0x00,0x00,
+      |         {
+  104 |         0x00,0x00,0x00,0x30,0x30,0x00,0x00,0x00,// : 26
+      |                                                }
+  105 |         0x00,0x00,0x00,0xC0,0xC0,0x00,0x00,0x00,
+      |         {
+  106 |         0x00,0x00,0x80,0xB0,0x70,0x00,0x00,0x00,// ; 27
+      |                                                }
+  107 |         0x00,0x00,0x80,0x40,0x20,0x10,0x08,0x00,
+      |         {
+  108 |         0x00,0x01,0x02,0x04,0x08,0x10,0x20,0x00,// < 28
+      |                                                }
+  109 |         0x40,0x40,0x40,0x40,0x40,0x40,0x40,0x00,
+      |         {
+  110 |         0x04,0x04,0x04,0x04,0x04,0x04,0x04,0x00,// = 29
+      |                                                }
+  111 |         0x00,0x08,0x10,0x20,0x40,0x80,0x00,0x00,
+      |         {
+  112 |         0x00,0x20,0x10,0x08,0x04,0x02,0x01,0x00,// > 30
+      |                                                }
+  113 |         0x00,0x70,0x48,0x08,0x08,0x08,0xF0,0x00,
+      |         {
+  114 |         0x00,0x00,0x00,0x30,0x36,0x01,0x00,0x00,// ? 31
+      |                                                }
+  115 |         0xC0,0x30,0xC8,0x28,0xE8,0x10,0xE0,0x00,
+      |         {
+  116 |         0x07,0x18,0x27,0x24,0x23,0x14,0x0B,0x00,// @ 32
+      |                                                }
+  117 |         0x00,0x00,0xC0,0x38,0xE0,0x00,0x00,0x00,
+      |         {
+  118 |         0x20,0x3C,0x23,0x02,0x02,0x27,0x38,0x20,// A 33
+      |                                                }
+  119 |         0x08,0xF8,0x88,0x88,0x88,0x70,0x00,0x00,
+      |         {
+  120 |         0x20,0x3F,0x20,0x20,0x20,0x11,0x0E,0x00,// B 34
+      |                                                }
+  121 |         0xC0,0x30,0x08,0x08,0x08,0x08,0x38,0x00,
+      |         {
+  122 |         0x07,0x18,0x20,0x20,0x20,0x10,0x08,0x00,// C 35
+      |                                                }
+  123 |         0x08,0xF8,0x08,0x08,0x08,0x10,0xE0,0x00,
+      |         {
+  124 |         0x20,0x3F,0x20,0x20,0x20,0x10,0x0F,0x00,// D 36
+      |                                                }
+  125 |         0x08,0xF8,0x88,0x88,0xE8,0x08,0x10,0x00,
+      |         {
+  126 |         0x20,0x3F,0x20,0x20,0x23,0x20,0x18,0x00,// E 37
+      |                                                }
+  127 |         0x08,0xF8,0x88,0x88,0xE8,0x08,0x10,0x00,
+      |         {
+  128 |         0x20,0x3F,0x20,0x00,0x03,0x00,0x00,0x00,// F 38
+      |                                                }
+  129 |         0xC0,0x30,0x08,0x08,0x08,0x38,0x00,0x00,
+      |         {
+  130 |         0x07,0x18,0x20,0x20,0x22,0x1E,0x02,0x00,// G 39
+      |                                                }
+  131 |         0x08,0xF8,0x08,0x00,0x00,0x08,0xF8,0x08,
+      |         {
+  132 |         0x20,0x3F,0x21,0x01,0x01,0x21,0x3F,0x20,// H 40
+      |                                                }
+  133 |         0x00,0x08,0x08,0xF8,0x08,0x08,0x00,0x00,
+      |         {
+  134 |         0x00,0x20,0x20,0x3F,0x20,0x20,0x00,0x00,// I 41
+      |                                                }
+  135 |         0x00,0x00,0x08,0x08,0xF8,0x08,0x08,0x00,
+      |         {
+  136 |         0xC0,0x80,0x80,0x80,0x7F,0x00,0x00,0x00,// J 42
+      |                                                }
+  137 |         0x08,0xF8,0x88,0xC0,0x28,0x18,0x08,0x00,
+      |         {
+  138 |         0x20,0x3F,0x20,0x01,0x26,0x38,0x20,0x00,// K 43
+      |                                                }
+  139 |         0x08,0xF8,0x08,0x00,0x00,0x00,0x00,0x00,
+      |         {
+  140 |         0x20,0x3F,0x20,0x20,0x20,0x20,0x30,0x00,// L 44
+      |                                                }
+  141 |         0x08,0xF8,0xF8,0x00,0xF8,0xF8,0x08,0x00,
+      |         {
+  142 |         0x20,0x3F,0x00,0x3F,0x00,0x3F,0x20,0x00,// M 45
+      |                                                }
+  143 |         0x08,0xF8,0x30,0xC0,0x00,0x08,0xF8,0x08,
+      |         {
+  144 |         0x20,0x3F,0x20,0x00,0x07,0x18,0x3F,0x00,// N 46
+      |                                                }
+  145 |         0xE0,0x10,0x08,0x08,0x08,0x10,0xE0,0x00,
+      |         {
+  146 |         0x0F,0x10,0x20,0x20,0x20,0x10,0x0F,0x00,// O 47
+      |                                                }
+  147 |         0x08,0xF8,0x08,0x08,0x08,0x08,0xF0,0x00,
+      |         {
+  148 |         0x20,0x3F,0x21,0x01,0x01,0x01,0x00,0x00,// P 48
+      |                                                }
+  149 |         0xE0,0x10,0x08,0x08,0x08,0x10,0xE0,0x00,
+      |         {
+  150 |         0x0F,0x18,0x24,0x24,0x38,0x50,0x4F,0x00,// Q 49
+      |                                                }
+  151 |         0x08,0xF8,0x88,0x88,0x88,0x88,0x70,0x00,
+      |         {
+  152 |         0x20,0x3F,0x20,0x00,0x03,0x0C,0x30,0x20,// R 50
+      |                                                }
+  153 |         0x00,0x70,0x88,0x08,0x08,0x08,0x38,0x00,
+      |         {
+  154 |         0x00,0x38,0x20,0x21,0x21,0x22,0x1C,0x00,// S 51
+      |                                                }
+  155 |         0x18,0x08,0x08,0xF8,0x08,0x08,0x18,0x00,
+      |         {
+  156 |         0x00,0x00,0x20,0x3F,0x20,0x00,0x00,0x00,// T 52
+      |                                                }
+  157 |         0x08,0xF8,0x08,0x00,0x00,0x08,0xF8,0x08,
+      |         {
+  158 |         0x00,0x1F,0x20,0x20,0x20,0x20,0x1F,0x00,// U 53
+      |                                                }
+  159 |         0x08,0x78,0x88,0x00,0x00,0xC8,0x38,0x08,
+      |         {
+  160 |         0x00,0x00,0x07,0x38,0x0E,0x01,0x00,0x00,// V 54
+      |                                                }
+  161 |         0xF8,0x08,0x00,0xF8,0x00,0x08,0xF8,0x00,
+      |         {
+  162 |         0x03,0x3C,0x07,0x00,0x07,0x3C,0x03,0x00,// W 55
+      |                                                }
+  163 |         0x08,0x18,0x68,0x80,0x80,0x68,0x18,0x08,
+      |         {
+  164 |         0x20,0x30,0x2C,0x03,0x03,0x2C,0x30,0x20,// X 56
+      |                                                }
+  165 |         0x08,0x38,0xC8,0x00,0xC8,0x38,0x08,0x00,
+      |         {
+  166 |         0x00,0x00,0x20,0x3F,0x20,0x00,0x00,0x00,// Y 57
+      |                                                }
+  167 |         0x10,0x08,0x08,0x08,0xC8,0x38,0x08,0x00,
+      |         {
+  168 |         0x20,0x38,0x26,0x21,0x20,0x20,0x18,0x00,// Z 58
+      |                                                }
+  169 |         0x00,0x00,0x00,0xFE,0x02,0x02,0x02,0x00,
+      |         {
+  170 |         0x00,0x00,0x00,0x7F,0x40,0x40,0x40,0x00,// [ 59
+      |                                                }
+  171 |         0x00,0x0C,0x30,0xC0,0x00,0x00,0x00,0x00,
+      |         {
+  172 |         0x00,0x00,0x00,0x01,0x06,0x38,0xC0,0x00,// \ 60
+      |                                                }
+  173 |         0x00,0x02,0x02,0x02,0xFE,0x00,0x00,0x00,
+      |         {
+  174 |         0x00,0x40,0x40,0x40,0x7F,0x00,0x00,0x00,// ] 61
+      |                                                }
+  175 |         0x00,0x20,0x10,0x08,0x04,0x08,0x10,0x20,
+      |         {
+  176 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,// ^ 62
+      |                                                }
+  177 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,
+      |         {
+  178 |         0x80,0x80,0x80,0x80,0x80,0x80,0x80,0x80,// _ 63
+      |                                                }
+  179 |         0x00,0x02,0x04,0x08,0x00,0x00,0x00,0x00,
+      |         {
+  180 |         0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,// ` 64
+      |                                                }
+  181 |         0x00,0x00,0x80,0x80,0x80,0x80,0x00,0x00,
+      |         {
+  182 |         0x00,0x19,0x24,0x22,0x22,0x22,0x3F,0x20,// a 65
+      |                                                }
+  183 |         0x08,0xF8,0x00,0x80,0x80,0x00,0x00,0x00,
+      |         {
+  184 |         0x00,0x3F,0x11,0x20,0x20,0x11,0x0E,0x00,// b 66
+      |                                                }
+  185 |         0x00,0x00,0x00,0x80,0x80,0x80,0x00,0x00,
+      |         {
+  186 |         0x00,0x0E,0x11,0x20,0x20,0x20,0x11,0x00,// c 67
+      |                                                }
+  187 |         0x00,0x00,0x00,0x80,0x80,0x88,0xF8,0x00,
+      |         {
+  188 |         0x00,0x0E,0x11,0x20,0x20,0x10,0x3F,0x20,// d 68
+      |                                                }
+  189 |         0x00,0x00,0x80,0x80,0x80,0x80,0x00,0x00,
+      |         {
+  190 |         0x00,0x1F,0x22,0x22,0x22,0x22,0x13,0x00,// e 69
+      |                                                }
+  191 |         0x00,0x80,0x80,0xF0,0x88,0x88,0x88,0x18,
+      |         {
+  192 |         0x00,0x20,0x20,0x3F,0x20,0x20,0x00,0x00,// f 70
+      |                                                }
+  193 |         0x00,0x00,0x80,0x80,0x80,0x80,0x80,0x00,
+      |         {
+  194 |         0x00,0x6B,0x94,0x94,0x94,0x93,0x60,0x00,// g 71
+      |                                                }
+  195 |         0x08,0xF8,0x00,0x80,0x80,0x80,0x00,0x00,
+      |         {
+  196 |         0x20,0x3F,0x21,0x00,0x00,0x20,0x3F,0x20,// h 72
+      |                                                }
+  197 |         0x00,0x80,0x98,0x98,0x00,0x00,0x00,0x00,
+      |         {
+  198 |         0x00,0x20,0x20,0x3F,0x20,0x20,0x00,0x00,// i 73
+      |                                                }
+  199 |         0x00,0x00,0x00,0x80,0x98,0x98,0x00,0x00,
+      |         {
+  200 |         0x00,0xC0,0x80,0x80,0x80,0x7F,0x00,0x00,// j 74
+      |                                                }
+  201 |         0x08,0xF8,0x00,0x00,0x80,0x80,0x80,0x00,
+      |         {
+  202 |         0x20,0x3F,0x24,0x02,0x2D,0x30,0x20,0x00,// k 75
+      |                                                }
+  203 |         0x00,0x08,0x08,0xF8,0x00,0x00,0x00,0x00,
+      |         {
+  204 |         0x00,0x20,0x20,0x3F,0x20,0x20,0x00,0x00,// l 76
+      |                                                }
+  205 |         0x80,0x80,0x80,0x80,0x80,0x80,0x80,0x00,
+      |         {
+  206 |         0x20,0x3F,0x20,0x00,0x3F,0x20,0x00,0x3F,// m 77
+      |                                                }
+  207 |         0x00,0x80,0x80,0x00,0x80,0x80,0x00,0x00,
+      |         {
+  208 |         0x00,0x20,0x3F,0x21,0x00,0x20,0x3F,0x20,// n 78
+      |                                                }
+  209 |         0x00,0x00,0x80,0x80,0x80,0x80,0x00,0x00,
+      |         {
+  210 |         0x00,0x1F,0x20,0x20,0x20,0x20,0x1F,0x00,// o 79
+      |                                                }
+  211 |         0x80,0x80,0x00,0x80,0x80,0x00,0x00,0x00,
+      |         {
+  212 |         0x80,0xFF,0xA1,0x20,0x20,0x11,0x0E,0x00,// p 80
+      |                                                }
+  213 |         0x00,0x00,0x00,0x80,0x80,0x80,0x80,0x00,
+      |         {
+  214 |         0x00,0x0E,0x11,0x20,0x20,0xA0,0xFF,0x80,// q 81
+      |                                                }
+  215 |         0x80,0x80,0x80,0x00,0x80,0x80,0x80,0x00,
+      |         {
+  216 |         0x20,0x20,0x3F,0x21,0x20,0x00,0x01,0x00,// r 82
+      |                                                }
+  217 |         0x00,0x00,0x80,0x80,0x80,0x80,0x80,0x00,
+      |         {
+  218 |         0x00,0x33,0x24,0x24,0x24,0x24,0x19,0x00,// s 83
+      |                                                }
+  219 |         0x00,0x80,0x80,0xE0,0x80,0x80,0x00,0x00,
+      |         {
+  220 |         0x00,0x00,0x00,0x1F,0x20,0x20,0x00,0x00,// t 84
+      |                                                }
+  221 |         0x80,0x80,0x00,0x00,0x00,0x80,0x80,0x00,
+      |         {
+  222 |         0x00,0x1F,0x20,0x20,0x20,0x10,0x3F,0x20,// u 85
+      |                                                }
+  223 |         0x80,0x80,0x80,0x00,0x00,0x80,0x80,0x80,
+      |         {
+  224 |         0x00,0x01,0x0E,0x30,0x08,0x06,0x01,0x00,// v 86
+      |                                                }
+  225 |         0x80,0x80,0x00,0x80,0x00,0x80,0x80,0x80,
+      |         {
+  226 |         0x0F,0x30,0x0C,0x03,0x0C,0x30,0x0F,0x00,// w 87
+      |                                                }
+  227 |         0x00,0x80,0x80,0x00,0x80,0x80,0x80,0x00,
+      |         {
+  228 |         0x00,0x20,0x31,0x2E,0x0E,0x31,0x20,0x00,// x 88
+      |                                                }
+  229 |         0x80,0x80,0x80,0x00,0x00,0x80,0x80,0x80,
+      |         {
+  230 |         0x80,0x81,0x8E,0x70,0x18,0x06,0x01,0x00,// y 89
+      |                                                }
+  231 |         0x00,0x80,0x80,0x80,0x80,0x80,0x80,0x00,
+      |         {
+  232 |         0x00,0x21,0x30,0x2C,0x22,0x21,0x30,0x00,// z 90
+      |                                                }
+  233 |         0x00,0x00,0x00,0x00,0x80,0x7C,0x02,0x02,
+      |         {
+  234 |         0x00,0x00,0x00,0x00,0x00,0x3F,0x40,0x40,// { 91
+      |                                                }
+  235 |         0x00,0x00,0x00,0x00,0xFF,0x00,0x00,0x00,
+      |         {
+  236 |         0x00,0x00,0x00,0x00,0xFF,0x00,0x00,0x00,// | 92
+      |                                                }
+  237 |         0x00,0x02,0x02,0x7C,0x80,0x00,0x00,0x00,
+      |         {
+  238 |         0x00,0x40,0x40,0x3F,0x00,0x00,0x00,0x00,// } 93
+      |                                                }
+  239 |         0x00,0x80,0x40,0x40,0x80,0x00,0x00,0x80,
+      |         {
+  240 |         0x00,0x00,0x00,0x00,0x00,0x01,0x01,0x00,// ~ 94
+  241 | };
+      | }
+/home/ep_hdy/Code/ESP32/_096LED_SPI/main/OLED_SPI.c:245:1: error: missing braces around initializer [-Werror=missing-braces]
+  245 | {
+      | ^
+  246 |         0x00,0x00,0x00,0x00,0x00,0x00,//   0
+      |         {                            }
+  247 |         0x00,0x00,0x00,0x2F,0x00,0x00,// ! 1
+      |         {                            }
+  248 |         0x00,0x00,0x07,0x00,0x07,0x00,// " 2
+      |         {                            }
+  249 |         0x00,0x14,0x7F,0x14,0x7F,0x14,// # 3
+      |         {                            }
+  250 |         0x00,0x24,0x2A,0x7F,0x2A,0x12,// $ 4
+      |         {                            }
+  251 |         0x00,0x23,0x13,0x08,0x64,0x62,// % 5
+      |         {                            }
+  252 |         0x00,0x36,0x49,0x55,0x22,0x50,// & 6
+      |         {                            }
+  253 |         0x00,0x00,0x00,0x07,0x00,0x00,// ' 7
+      |         {                            }
+  254 |         0x00,0x00,0x1C,0x22,0x41,0x00,// ( 8
+      |         {                            }
+  255 |         0x00,0x00,0x41,0x22,0x1C,0x00,// ) 9
+      |         {                            }
+  256 |         0x00,0x14,0x08,0x3E,0x08,0x14,// * 10
+      |         {                            }
+  257 |         0x00,0x08,0x08,0x3E,0x08,0x08,// + 11
+      |         {                            }
+  258 |         0x00,0x00,0x00,0xA0,0x60,0x00,// , 12
+      |         {                            }
+  259 |         0x00,0x08,0x08,0x08,0x08,0x08,// - 13
+      |         {                            }
+  260 |         0x00,0x00,0x60,0x60,0x00,0x00,// . 14
+      |         {                            }
+  261 |         0x00,0x20,0x10,0x08,0x04,0x02,// / 15
+      |         {                            }
+  262 |         0x00,0x3E,0x51,0x49,0x45,0x3E,// 0 16
+      |         {                            }
+  263 |         0x00,0x00,0x42,0x7F,0x40,0x00,// 1 17
+      |         {                            }
+  264 |         0x00,0x42,0x61,0x51,0x49,0x46,// 2 18
+      |         {                            }
+  265 |         0x00,0x21,0x41,0x45,0x4B,0x31,// 3 19
+      |         {                            }
+  266 |         0x00,0x18,0x14,0x12,0x7F,0x10,// 4 20
+      |         {                            }
+  267 |         0x00,0x27,0x45,0x45,0x45,0x39,// 5 21
+      |         {                            }
+  268 |         0x00,0x3C,0x4A,0x49,0x49,0x30,// 6 22
+      |         {                            }
+  269 |         0x00,0x01,0x71,0x09,0x05,0x03,// 7 23
+      |         {                            }
+  270 |         0x00,0x36,0x49,0x49,0x49,0x36,// 8 24
+      |         {                            }
+  271 |         0x00,0x06,0x49,0x49,0x29,0x1E,// 9 25
+      |         {                            }
+  272 |         0x00,0x00,0x36,0x36,0x00,0x00,// : 26
+      |         {                            }
+  273 |         0x00,0x00,0x56,0x36,0x00,0x00,// ; 27
+      |         {                            }
+  274 |         0x00,0x08,0x14,0x22,0x41,0x00,// < 28
+      |         {                            }
+  275 |         0x00,0x14,0x14,0x14,0x14,0x14,// = 29
+      |         {                            }
+  276 |         0x00,0x00,0x41,0x22,0x14,0x08,// > 30
+      |         {                            }
+  277 |         0x00,0x02,0x01,0x51,0x09,0x06,// ? 31
+      |         {                            }
+  278 |         0x00,0x3E,0x49,0x55,0x59,0x2E,// @ 32
+      |         {                            }
+  279 |         0x00,0x7C,0x12,0x11,0x12,0x7C,// A 33
+      |         {                            }
+  280 |         0x00,0x7F,0x49,0x49,0x49,0x36,// B 34
+      |         {                            }
+  281 |         0x00,0x3E,0x41,0x41,0x41,0x22,// C 35
+      |         {                            }
+  282 |         0x00,0x7F,0x41,0x41,0x22,0x1C,// D 36
+      |         {                            }
+  283 |         0x00,0x7F,0x49,0x49,0x49,0x41,// E 37
+      |         {                            }
+  284 |         0x00,0x7F,0x09,0x09,0x09,0x01,// F 38
+      |         {                            }
+  285 |         0x00,0x3E,0x41,0x49,0x49,0x7A,// G 39
+      |         {                            }
+  286 |         0x00,0x7F,0x08,0x08,0x08,0x7F,// H 40
+      |         {                            }
+  287 |         0x00,0x00,0x41,0x7F,0x41,0x00,// I 41
+      |         {                            }
+  288 |         0x00,0x20,0x40,0x41,0x3F,0x01,// J 42
+      |         {                            }
+  289 |         0x00,0x7F,0x08,0x14,0x22,0x41,// K 43
+      |         {                            }
+  290 |         0x00,0x7F,0x40,0x40,0x40,0x40,// L 44
+      |         {                            }
+  291 |         0x00,0x7F,0x02,0x0C,0x02,0x7F,// M 45
+      |         {                            }
+  292 |         0x00,0x7F,0x04,0x08,0x10,0x7F,// N 46
+      |         {                            }
+  293 |         0x00,0x3E,0x41,0x41,0x41,0x3E,// O 47
+      |         {                            }
+  294 |         0x00,0x7F,0x09,0x09,0x09,0x06,// P 48
+      |         {                            }
+  295 |         0x00,0x3E,0x41,0x51,0x21,0x5E,// Q 49
+      |         {                            }
+  296 |         0x00,0x7F,0x09,0x19,0x29,0x46,// R 50
+      |         {                            }
+  297 |         0x00,0x46,0x49,0x49,0x49,0x31,// S 51
+      |         {                            }
+  298 |         0x00,0x01,0x01,0x7F,0x01,0x01,// T 52
+      |         {                            }
+  299 |         0x00,0x3F,0x40,0x40,0x40,0x3F,// U 53
+      |         {                            }
+  300 |         0x00,0x1F,0x20,0x40,0x20,0x1F,// V 54
+      |         {                            }
+  301 |         0x00,0x3F,0x40,0x38,0x40,0x3F,// W 55
+      |         {                            }
+  302 |         0x00,0x63,0x14,0x08,0x14,0x63,// X 56
+      |         {                            }
+  303 |         0x00,0x07,0x08,0x70,0x08,0x07,// Y 57
+      |         {                            }
+  304 |         0x00,0x61,0x51,0x49,0x45,0x43,// Z 58
+      |         {                            }
+  305 |         0x00,0x00,0x7F,0x41,0x41,0x00,// [ 59
+      |         {                            }
+  306 |         0x00,0x02,0x04,0x08,0x10,0x20,// \ 60
+      |         {                            }
+  307 |         0x00,0x00,0x41,0x41,0x7F,0x00,// ] 61
+      |         {                            }
+  308 |         0x00,0x04,0x02,0x01,0x02,0x04,// ^ 62
+      |         {                            }
+  309 |         0x00,0x40,0x40,0x40,0x40,0x40,// _ 63
+      |         {                            }
+  310 |         0x00,0x00,0x01,0x02,0x04,0x00,// ` 64
+      |         {                            }
+  311 |         0x00,0x20,0x54,0x54,0x54,0x78,// a 65
+      |         {                            }
+  312 |         0x00,0x7F,0x48,0x44,0x44,0x38,// b 66
+      |         {                            }
+  313 |         0x00,0x38,0x44,0x44,0x44,0x20,// c 67
+      |         {                            }
+  314 |         0x00,0x38,0x44,0x44,0x48,0x7F,// d 68
+      |         {                            }
+  315 |         0x00,0x38,0x54,0x54,0x54,0x18,// e 69
+      |         {                            }
+  316 |         0x00,0x08,0x7E,0x09,0x01,0x02,// f 70
+      |         {                            }
+  317 |         0x00,0x18,0xA4,0xA4,0xA4,0x7C,// g 71
+      |         {                            }
+  318 |         0x00,0x7F,0x08,0x04,0x04,0x78,// h 72
+      |         {                            }
+  319 |         0x00,0x00,0x44,0x7D,0x40,0x00,// i 73
+      |         {                            }
+  320 |         0x00,0x40,0x80,0x84,0x7D,0x00,// j 74
+      |         {                            }
+  321 |         0x00,0x7F,0x10,0x28,0x44,0x00,// k 75
+      |         {                            }
+  322 |         0x00,0x00,0x41,0x7F,0x40,0x00,// l 76
+      |         {                            }
+  323 |         0x00,0x7C,0x04,0x18,0x04,0x78,// m 77
+      |         {                            }
+  324 |         0x00,0x7C,0x08,0x04,0x04,0x78,// n 78
+      |         {                            }
+  325 |         0x00,0x38,0x44,0x44,0x44,0x38,// o 79
+      |         {                            }
+  326 |         0x00,0xFC,0x24,0x24,0x24,0x18,// p 80
+      |         {                            }
+  327 |         0x00,0x18,0x24,0x24,0x18,0xFC,// q 81
+      |         {                            }
+  328 |         0x00,0x7C,0x08,0x04,0x04,0x08,// r 82
+      |         {                            }
+  329 |         0x00,0x48,0x54,0x54,0x54,0x20,// s 83
+      |         {                            }
+  330 |         0x00,0x04,0x3F,0x44,0x40,0x20,// t 84
+      |         {                            }
+  331 |         0x00,0x3C,0x40,0x40,0x20,0x7C,// u 85
+      |         {                            }
+  332 |         0x00,0x1C,0x20,0x40,0x20,0x1C,// v 86
+      |         {                            }
+  333 |         0x00,0x3C,0x40,0x30,0x40,0x3C,// w 87
+      |         {                            }
+  334 |         0x00,0x44,0x28,0x10,0x28,0x44,// x 88
+      |         {                            }
+  335 |         0x00,0x1C,0xA0,0xA0,0xA0,0x7C,// y 89
+      |         {                            }
+  336 |         0x00,0x44,0x64,0x54,0x4C,0x44,// z 90
+      |         {                            }
+  337 |         0x00,0x00,0x08,0x7F,0x41,0x00,// { 91
+      |         {                            }
+  338 |         0x00,0x00,0x00,0x7F,0x00,0x00,// | 92
+      |         {                            }
+  339 |         0x00,0x00,0x41,0x7F,0x08,0x00,// } 93
+      |         {                            }
+  340 |         0x00,0x08,0x04,0x08,0x10,0x08,// ~ 94
+      |         {
+  341 | };
+      | }
+/home/ep_hdy/Code/ESP32/_096LED_SPI/main/OLED_SPI.c: In function 'oled_witre_char':
+/home/ep_hdy/Code/ESP32/_096LED_SPI/main/OLED_SPI.c:493:31: warning: passing argument 1 of 'oled_write_bytes' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  493 |     oled_write_bytes(oled_f8x6[2],6);
+      |                      ~~~~~~~~~^~~
+/home/ep_hdy/Code/ESP32/_096LED_SPI/main/OLED_SPI.c:449:31: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'const uint8_t *' {aka 'const unsigned char *'}
+  449 | void oled_write_bytes(uint8_t chr[],uint8_t n){
+      |                       ~~~~~~~~^~~~~
+cc1: some warnings being treated as errors
+[3/10] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/_096LED_SPI/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/_096LED_SPI/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+ninja: build stopped: subcommand failed.

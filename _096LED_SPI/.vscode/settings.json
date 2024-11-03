@@ -1,0 +1,32 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.associations": {
+    "freertos.h": "c",
+    "*.tcc": "cpp",
+    "regex": "cpp",
+    "complex": "cpp",
+    "fstream": "cpp",
+    "iomanip": "cpp",
+    "istream": "cpp",
+    "ostream": "cpp",
+    "*.inc": "cpp",
+    "gpio.h": "c",
+    "string.h": "c",
+    "oled_spi.h": "c",
+    "atomic": "cpp",
+    "stdio.h": "c",
+    "array": "c",
+    "charconv": "c",
+    "compare": "c",
+    "functional": "c",
+    "ratio": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "utility": "c",
+    "variant": "c",
+    "bitset": "c",
+    "algorithm": "c",
+    "format": "c"
+  },
+  "idf.adapterTargetName": "esp32"
+}

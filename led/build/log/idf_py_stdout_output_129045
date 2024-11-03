@@ -1,0 +1,37 @@
+[1/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy_dp83848.c.obj
+[2/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_netif_glue.c.obj
+[3/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy_ip101.c.obj
+[4/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy_802_3.c.obj
+[5/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj
+[6/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy_lan87xx.c.obj
+[7/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy_ksz80xx.c.obj
+[8/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_phy_rtl8201.c.obj
+[9/29] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/led/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/led/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[10/29] No install step for 'bootloader'
+[11/29] Completed 'bootloader'
+[12/29] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth_mac_esp.c.obj
+[13/29] Linking C static library esp-idf/esp_eth/libesp_eth.a
+[14/29] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/spi/sdspi/sdspi_transaction.c.obj
+[15/29] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io_spi.c.obj
+[16/29] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/spi/sdspi/sdspi_host.c.obj
+[17/29] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+[18/29] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/led.c.obj
+[19/29] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+[20/29] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/spi/gpspi/spi_master.c.obj
+[21/29] Building C object esp-idf/driver/CMakeFiles/__idf_driver.dir/spi/gpspi/spi_common.c.obj
+[22/29] Linking C static library esp-idf/driver/libdriver.a
+[23/29] Linking C static library esp-idf/fatfs/libfatfs.a
+[24/29] Linking C static library esp-idf/esp_lcd/libesp_lcd.a
+[25/29] Linking C static library esp-idf/main/libmain.a
+[26/29] Generating ld/sections.ld
+[27/29] Linking CXX executable led.elf
+[28/29] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ep_hdy/Code/ESP32/led/build/led.bin
+[29/29] cd /home/ep_hdy/Code/ESP32/led/build/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ep_hdy/Code/ESP32/led/build/partition_table/partition-table.bin /home/ep_hdy/Code/ESP32/led/build/led.bin
+led.bin binary size 0x308f0 bytes. Smallest app partition is 0x100000 bytes. 0xcf710 bytes (81%) free.
