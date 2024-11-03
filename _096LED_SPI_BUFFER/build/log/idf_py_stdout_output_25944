@@ -1,0 +1,18 @@
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/_096LED_SPI_BUFFER.c.obj
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/_096LED_SPI_BUFFER/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/_096LED_SPI_BUFFER/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[3/10] No install step for 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/OLED_SPI_BUFFER.c.obj
+[5/10] Completed 'bootloader'
+[6/10] Linking C static library esp-idf/main/libmain.a
+[7/10] Generating ld/sections.ld
+[8/10] Linking CXX executable _096LED_SPI_BUFFER.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ep_hdy/Code/ESP32/_096LED_SPI_BUFFER/build/_096LED_SPI_BUFFER.bin
+[10/10] cd /home/ep_hdy/Code/ESP32/_096LED_SPI_BUFFER/build/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ep_hdy/Code/ESP32/_096LED_SPI_BUFFER/build/partition_table/partition-table.bin /home/ep_hdy/Code/ESP32/_096LED_SPI_BUFFER/build/_096LED_SPI_BUFFER.bin
+_096LED_SPI_BUFFER.bin binary size 0x33ed0 bytes. Smallest app partition is 0x100000 bytes. 0xcc130 bytes (80%) free.
