@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/ep_hdy/Code/ESP32/_TFT_ILI9341_SPI/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

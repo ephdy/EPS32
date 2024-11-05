@@ -1,0 +1,6 @@
+{
+    "idf.adapterTargetName": "esp32",
+    "files.associations": {
+        "tft_ili9341.h": "c"
+    }
+}
