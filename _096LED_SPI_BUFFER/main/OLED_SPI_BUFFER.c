@@ -343,6 +343,11 @@ const uint8_t oled_f8x6[][6] =
 };
 /*********************ASCII字模数据*/
 
+uint8_t img_face[]={
+	0xFF,0X01,0XE1,0X11,0X49,0X25,0X45,0X05,0X45,0X25,0X49,0X11,0XE1,0X01,0XFF,
+	0X7F,0X40,0X43,0X44,0X48,0X51,0X52,0X52,0X52,0X51,0X48,0X44,0X43,0X40,0X7F
+	};
+
 uint8_t oled_disply_buffer[8][4][32]={0};
 
 spi_device_handle_t spi;
@@ -507,8 +512,23 @@ void oled_clr(){
     }
 }
 */
-void oled_write_buffer(uint8_t Page,uint8_t Coul,uint8_t data){
-	oled_disply_buffer[Page][Coul/32][Coul%32]=data;
+void oled_write_buffer(uint8_t Page,uint8_t Coul,uint8_t data,uint8_t dire,uint8_t bits){
+	if (Page<8 && Coul<128)		
+	{
+		switch (dire)
+		{
+		case 1:
+			oled_disply_buffer[Page][Coul/32][Coul%32]|= data<<bits;
+			break;
+		case 0:
+			oled_disply_buffer[Page][Coul/32][Coul%32]|= data>>bits;
+			break;
+		default:
+			break;
+		}
+	}
+	
+	
 }
 
 void oled_update(){
@@ -531,14 +551,14 @@ void oled_witre_char(uint8_t Page,uint8_t Coul,uint8_t chr,uint8_t width){
     case 6://字符宽度6
         for (uint8_t i = 0; i < 6; i++)
         {
-            oled_write_buffer(Page,Coul+i,oled_f8x6[chr-' '][i]);
+            oled_write_buffer(Page,Coul+i,oled_f8x6[chr-' '][i],0,0);
         }
         break;
 	case 8://字符宽度8
         for (uint8_t i = 0; i < 8; i++)
         {
-            oled_write_buffer(Page,Coul+i,oled_f16x8[(chr-' ')*2][i]);
-			oled_write_buffer(Page+1,Coul+i,oled_f16x8[(chr-' ')*2+1][i]);
+            oled_write_buffer(Page,Coul+i,oled_f16x8[(chr-' ')*2][i],0,0);
+			oled_write_buffer(Page+1,Coul+i,oled_f16x8[(chr-' ')*2+1][i],0,0);
         }
         break;
 	
@@ -552,4 +572,16 @@ void oled_witre_string(uint8_t Page,uint8_t Coul,char *str,uint8_t width){
     {
         oled_witre_char(Page,Coul+i*width,str[i],width);
     }
+}
+
+void oled_witre_image(uint8_t x,uint8_t y,uint8_t height,uint8_t width,uint8_t *img){
+	for (uint8_t i = 0; i < width/8+1; i++){
+		for (uint8_t j = 0; j < width; j++)
+		{
+			oled_write_buffer(y/8+i,x+j,img[j+i*15],1,y%8);
+			if(y%8!=0){oled_write_buffer(y/8+1+i,x+j,img[j+i*15],0,8-(y%8));}
+			
+		}
+	}
+
 }

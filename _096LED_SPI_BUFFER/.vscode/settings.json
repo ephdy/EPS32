@@ -1,6 +1,7 @@
 {
     "idf.adapterTargetName": "esp32",
     "files.associations": {
-        "oled_spi_buffer.h": "c"
+        "oled_spi_buffer.h": "c",
+        "cstdint": "c"
     }
 }

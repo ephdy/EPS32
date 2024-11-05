@@ -20,9 +20,10 @@ void app_main(void)
     */
     
     oled_clr();
-    oled_write_buffer(7,127,0xff);
-    oled_witre_char(0,0,'a',6);
-    oled_witre_string(2,0,"Hello World!",8);
+
+    oled_witre_image(60,33,15,15,img_face);
+
+
     oled_update();
-    
+
 }
