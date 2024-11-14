@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "WS2812",
-    "project_version":    "12421cb-dirty",
+    "project_version":    "82baa93-dirty",
     "project_path":       "/home/ep_hdy/Code/ESP32/WS2812",
     "idf_path":           "/home/ep_hdy/esp/esp-idf",
     "build_dir":          "/home/ep_hdy/Code/ESP32/WS2812/build",
@@ -820,7 +820,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__led_strip" ],
             "file": "/home/ep_hdy/Code/ESP32/WS2812/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c" ],
+            "sources": [ "/home/ep_hdy/Code/ESP32/WS2812/main/RMT_WS2812.c", "/home/ep_hdy/Code/ESP32/WS2812/main/WIFI_STA.c", "/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
