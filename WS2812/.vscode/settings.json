@@ -1,0 +1,12 @@
+{
+  "C_Cpp.intelliSenseEngine": "default",
+  "files.associations": {
+    "esp_err.h": "c",
+    "task.h": "c",
+    "wifi_sta.h": "c",
+    "functional": "c",
+    "socket.h": "c"
+  },
+  "idf.port": "/dev/ttyUSB0",
+  "idf.adapterTargetName": "esp32"
+}

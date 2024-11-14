@@ -1,0 +1,119 @@
+[1/109] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig.c.obj
+[2/109] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_netif.c.obj
+[3/109] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_default.c.obj
+[4/109] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/smartconfig_ack.c.obj
+[5/109] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/src/wifi_init.c.obj
+[6/109] Building C object esp-idf/esp_wifi/CMakeFiles/__idf_esp_wifi.dir/esp32/esp_adapter.c.obj
+[7/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/eloop.c.obj
+[8/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/port/os_xtensa.c.obj
+[9/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ap_config.c.obj
+[10/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_1x.c.obj
+[11/109] Linking C static library esp-idf/esp_wifi/libesp_wifi.a
+[12/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/pmksa_cache_auth.c.obj
+[13/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/sta_info.c.obj
+[14/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth_ie.c.obj
+[15/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/comeback_token.c.obj
+[16/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/ieee802_11.c.obj
+[17/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/bitfield.c.obj
+[18/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/dragonfly.c.obj
+[19/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-siv.c.obj
+[20/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-kdf.c.obj
+[21/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ccmp.c.obj
+[22/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/ap/wpa_auth.c.obj
+[23/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/wpa_common.c.obj
+[24/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_group5.c.obj
+[25/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/crypto_ops.c.obj
+[26/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-gcm.c.obj
+[27/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tlsprf.c.obj
+[28/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/dh_groups.c.obj
+[29/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-tlsprf.c.obj
+[30/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-tlsprf.c.obj
+[31/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/ms_funcs.c.obj
+[32/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae.c.obj
+[33/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha256-prf.c.obj
+[34/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-prf.c.obj
+[35/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha384-prf.c.obj
+[36/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/md4-internal.c.obj
+[37/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_common/eap_wsc_common.c.obj
+[38/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/sha1-tprf.c.obj
+[39/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/chap.c.obj
+[40/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/ieee802_11_common.c.obj
+[41/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap_common.c.obj
+[42/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_common.c.obj
+[43/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls.c.obj
+[44/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap.c.obj
+[45/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_mschapv2.c.obj
+[46/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_peap.c.obj
+[47/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/mschapv2.c.obj
+[48/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast_common.c.obj
+[49/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_tls_common.c.obj
+[50/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_ttls.c.obj
+[51/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/base64.c.obj
+[52/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/pmksa_cache.c.obj
+[53/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa_ie.c.obj
+[54/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast.c.obj
+[55/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/eap_peer/eap_fast_pac.c.obj
+[56/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/ext_password.c.obj
+[57/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpabuf.c.obj
+[58/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/uuid.c.obj
+[59/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/rsn_supp/wpa.c.obj
+[60/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/wpa_debug.c.obj
+[61/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/common.c.obj
+[62/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps.c.obj
+[63/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/utils/json.c.obj
+[64/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_parse.c.obj
+[65/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_process.c.obj
+[66/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/common/sae_pk.c.obj
+[67/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_attr_build.c.obj
+[68/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_dev_attr.c.obj
+[69/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_enrollee.c.obj
+[70/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/wps/wps_common.c.obj
+[71/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wpa_main.c.obj
+[72/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_common.c.obj
+[73/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wpas_glue.c.obj
+[74/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_owe.c.obj
+[75/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_eap_client.c.obj
+[76/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_hostap.c.obj
+[77/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wpa3.c.obj
+[78/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/fastpbkdf2.c.obj
+[79/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls-bignum.c.obj
+[80/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls.c.obj
+[81/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/tls_mbedtls.c.obj
+[82/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls-rsa.c.obj
+[83/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/rc4.c.obj
+[84/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-wrap.c.obj
+[85/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/esp_wps.c.obj
+[86/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/esp_supplicant/src/crypto/crypto_mbedtls-ec.c.obj
+[87/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-unwrap.c.obj
+[88/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/aes-ccm.c.obj
+[89/109] Building C object esp-idf/wpa_supplicant/CMakeFiles/__idf_wpa_supplicant.dir/src/crypto/des-internal.c.obj
+[90/109] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[91/109] Linking C static library esp-idf/wpa_supplicant/libwpa_supplicant.a
+[92/109] No install step for 'bootloader'
+[93/109] Building C object esp-idf/esp_common/CMakeFiles/__idf_esp_common.dir/src/esp_err_to_name.c.obj
+[94/109] Completed 'bootloader'
+[95/109] Building C object esp-idf/esp_phy/CMakeFiles/__idf_esp_phy.dir/src/phy_init.c.obj
+[96/109] Linking C static library esp-idf/esp_phy/libesp_phy.a
+[97/109] Linking C static library esp-idf/esp_common/libesp_common.a
+[98/109] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_console.c.obj
+[99/109] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/scheme_softap.c.obj
+[100/109] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/handlers.c.obj
+[101/109] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj 
+/home/ep_hdy/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.2.3\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/ep_hdy/Code/ESP32/WS2812/build/config -I/home/ep_hdy/Code/ESP32/WS2812/main -I/home/ep_hdy/esp/esp-idf/components/newlib/platform_include -I/home/ep_hdy/esp/esp-idf/components/freertos/config/include -I/home/ep_hdy/esp/esp-idf/components/freertos/config/include/freertos -I/home/ep_hdy/esp/esp-idf/components/freertos/config/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/ep_hdy/esp/esp-idf/components/freertos/esp_additions/include -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include/soc -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/ep_hdy/esp/esp-idf/components/heap/include -I/home/ep_hdy/esp/esp-idf/components/log/include -I/home/ep_hdy/esp/esp-idf/components/soc/include -I/home/ep_hdy/esp/esp-idf/components/soc/esp32 -I/home/ep_hdy/esp/esp-idf/components/soc/esp32/include -I/home/ep_hdy/esp/esp-idf/components/hal/platform_port/include -I/home/ep_hdy/esp/esp-idf/components/hal/esp32/include -I/home/ep_hdy/esp/esp-idf/components/hal/include -I/home/ep_hdy/esp/esp-idf/components/esp_rom/include -I/home/ep_hdy/esp/esp-idf/components/esp_rom/include/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_rom/esp32 -I/home/ep_hdy/esp/esp-idf/components/esp_common/include -I/home/ep_hdy/esp/esp-idf/components/esp_system/include -I/home/ep_hdy/esp/esp-idf/components/esp_system/port/soc -I/home/ep_hdy/esp/esp-idf/components/esp_system/port/include/private -I/home/ep_hdy/esp/esp-idf/components/xtensa/esp32/include -I/home/ep_hdy/esp/esp-idf/components/xtensa/include -I/home/ep_hdy/esp/esp-idf/components/xtensa/deprecated_include -I/home/ep_hdy/esp/esp-idf/components/lwip/include -I/home/ep_hdy/esp/esp-idf/components/lwip/include/apps -I/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/sntp -I/home/ep_hdy/esp/esp-idf/components/lwip/lwip/src/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/freertos/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/ep_hdy/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/ep_hdy/Code/ESP32/WS2812/managed_components/espressif__led_strip/include -I/home/ep_hdy/Code/ESP32/WS2812/managed_components/espressif__led_strip/interface -I/home/ep_hdy/esp/esp-idf/components/driver/include -I/home/ep_hdy/esp/esp-idf/components/driver/deprecated -I/home/ep_hdy/esp/esp-idf/components/driver/analog_comparator/include -I/home/ep_hdy/esp/esp-idf/components/driver/dac/include -I/home/ep_hdy/esp/esp-idf/components/driver/gpio/include -I/home/ep_hdy/esp/esp-idf/components/driver/gptimer/include -I/home/ep_hdy/esp/esp-idf/components/driver/i2c/include -I/home/ep_hdy/esp/esp-idf/components/driver/i2s/include -I/home/ep_hdy/esp/esp-idf/components/driver/ledc/include -I/home/ep_hdy/esp/esp-idf/components/driver/mcpwm/include -I/home/ep_hdy/esp/esp-idf/components/driver/parlio/include -I/home/ep_hdy/esp/esp-idf/components/driver/pcnt/include -I/home/ep_hdy/esp/esp-idf/components/driver/rmt/include -I/home/ep_hdy/esp/esp-idf/components/driver/sdio_slave/include -I/home/ep_hdy/esp/esp-idf/components/driver/sdmmc/include -I/home/ep_hdy/esp/esp-idf/components/driver/sigma_delta/include -I/home/ep_hdy/esp/esp-idf/components/driver/spi/include -I/home/ep_hdy/esp/esp-idf/components/driver/temperature_sensor/include -I/home/ep_hdy/esp/esp-idf/components/driver/touch_sensor/include -I/home/ep_hdy/esp/esp-idf/components/driver/twai/include -I/home/ep_hdy/esp/esp-idf/components/driver/uart/include -I/home/ep_hdy/esp/esp-idf/components/driver/usb_serial_jtag/include -I/home/ep_hdy/esp/esp-idf/components/driver/touch_sensor/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_pm/include -I/home/ep_hdy/esp/esp-idf/components/esp_ringbuf/include -I/home/ep_hdy/esp/esp-idf/components/efuse/include -I/home/ep_hdy/esp/esp-idf/components/efuse/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_mm/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/port/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/library -I/home/ep_hdy/esp/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/ep_hdy/esp/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/ep_hdy/esp/esp-idf/components/esp_bootloader_format/include -I/home/ep_hdy/esp/esp-idf/components/esp_app_format/include -I/home/ep_hdy/esp/esp-idf/components/bootloader_support/include -I/home/ep_hdy/esp/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/ep_hdy/esp/esp-idf/components/esp_partition/include -I/home/ep_hdy/esp/esp-idf/components/app_update/include -I/home/ep_hdy/esp/esp-idf/components/spi_flash/include -I/home/ep_hdy/esp/esp-idf/components/pthread/include -I/home/ep_hdy/esp/esp-idf/components/esp_timer/include -I/home/ep_hdy/esp/esp-idf/components/app_trace/include -I/home/ep_hdy/esp/esp-idf/components/esp_event/include -I/home/ep_hdy/esp/esp-idf/components/nvs_flash/include -I/home/ep_hdy/esp/esp-idf/components/esp_phy/include -I/home/ep_hdy/esp/esp-idf/components/esp_phy/esp32/include -I/home/ep_hdy/esp/esp-idf/components/vfs/include -I/home/ep_hdy/esp/esp-idf/components/esp_netif/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/port/include -I/home/ep_hdy/esp/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/ep_hdy/esp/esp-idf/components/esp_coex/include -I/home/ep_hdy/esp/esp-idf/components/esp_wifi/include -I/home/ep_hdy/esp/esp-idf/components/esp_wifi/wifi_apps/include -I/home/ep_hdy/esp/esp-idf/components/unity/include -I/home/ep_hdy/esp/esp-idf/components/unity/unity/src -I/home/ep_hdy/esp/esp-idf/components/cmock/CMock/src -I/home/ep_hdy/esp/esp-idf/components/console -I/home/ep_hdy/esp/esp-idf/components/http_parser -I/home/ep_hdy/esp/esp-idf/components/esp-tls -I/home/ep_hdy/esp/esp-idf/components/esp-tls/esp-tls-crypto -I/home/ep_hdy/esp/esp-idf/components/esp_adc/include -I/home/ep_hdy/esp/esp-idf/components/esp_adc/interface -I/home/ep_hdy/esp/esp-idf/components/esp_adc/esp32/include -I/home/ep_hdy/esp/esp-idf/components/esp_adc/deprecated/include -I/home/ep_hdy/esp/esp-idf/components/esp_eth/include -I/home/ep_hdy/esp/esp-idf/components/esp_gdbstub/include -I/home/ep_hdy/esp/esp-idf/components/esp_hid/include -I/home/ep_hdy/esp/esp-idf/components/tcp_transport/include -I/home/ep_hdy/esp/esp-idf/components/esp_http_client/include -I/home/ep_hdy/esp/esp-idf/components/esp_http_server/include -I/home/ep_hdy/esp/esp-idf/components/esp_https_ota/include -I/home/ep_hdy/esp/esp-idf/components/esp_psram/include -I/home/ep_hdy/esp/esp-idf/components/esp_lcd/include -I/home/ep_hdy/esp/esp-idf/components/esp_lcd/interface -I/home/ep_hdy/esp/esp-idf/components/protobuf-c/protobuf-c -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/common -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/security -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/transports -I/home/ep_hdy/esp/esp-idf/components/protocomm/include/crypto/srp6a -I/home/ep_hdy/esp/esp-idf/components/protocomm/proto-c -I/home/ep_hdy/esp/esp-idf/components/esp_local_ctrl/include -I/home/ep_hdy/esp/esp-idf/components/espcoredump/include -I/home/ep_hdy/esp/esp-idf/components/espcoredump/include/port/xtensa -I/home/ep_hdy/esp/esp-idf/components/wear_levelling/include -I/home/ep_hdy/esp/esp-idf/components/sdmmc/include -I/home/ep_hdy/esp/esp-idf/components/fatfs/diskio -I/home/ep_hdy/esp/esp-idf/components/fatfs/src -I/home/ep_hdy/esp/esp-idf/components/fatfs/vfs -I/home/ep_hdy/esp/esp-idf/components/idf_test/include -I/home/ep_hdy/esp/esp-idf/components/idf_test/include/esp32 -I/home/ep_hdy/esp/esp-idf/components/ieee802154/include -I/home/ep_hdy/esp/esp-idf/components/json/cJSON -I/home/ep_hdy/esp/esp-idf/components/mqtt/esp-mqtt/include -I/home/ep_hdy/esp/esp-idf/components/nvs_sec_provider/include -I/home/ep_hdy/esp/esp-idf/components/perfmon/include -I/home/ep_hdy/esp/esp-idf/components/spiffs/include -I/home/ep_hdy/esp/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/ep_hdy/Code/ESP32/WS2812=. -fmacro-prefix-map=/home/ep_hdy/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj -c /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c: In function 'wifi_init_sta':
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:123:35: error: 'ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD' undeclared (first use in this function)
+  123 |             .threshold.authmode = ESP_WIFI_SCAN_AUTH_MODE_THRESHOLD,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:123:35: note: each undeclared identifier is reported only once for each function it appears in
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:124:28: error: 'ESP_WIFI_SAE_MODE' undeclared (first use in this function)
+  124 |             .sae_pwe_h2e = ESP_WIFI_SAE_MODE,
+      |                            ^~~~~~~~~~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:125:35: error: 'EXAMPLE_H2E_IDENTIFIER' undeclared (first use in this function)
+  125 |             .sae_h2e_identifier = EXAMPLE_H2E_IDENTIFIER,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~
+[102/109] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/wifi_scan.c.obj
+[103/109] Building C object esp-idf/wifi_provisioning/CMakeFiles/__idf_wifi_provisioning.dir/src/manager.c.obj
+ninja: build stopped: subcommand failed.

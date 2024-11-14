@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "oled_spi_buffer.h": "c"
+    }
+}
