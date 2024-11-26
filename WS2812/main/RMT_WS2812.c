@@ -38,11 +38,11 @@ led_strip_handle_t configure_led(void)
 }
 
 
-void WS2812_Updata(led_strip_handle_t led_strip,bool led_on_off,uint8_t *RGB,uint8_t brightness){
+void WS2812_Updata(led_strip_handle_t led_strip,bool led_on_off,uint8_t *ARGB,uint8_t brightness){
     if (led_on_off) {
             /* Set the LED pixel using RGB from 0 (0%) to 255 (100%) for each color */
             for (int i = 0; i < LED_STRIP_LED_NUMBERS; i++) {
-                ESP_ERROR_CHECK(led_strip_set_pixel(led_strip, i, RGB[i*3]* brightness / 100, RGB[i*3+1]* brightness / 100, RGB[i*3+2]* brightness / 100));
+                ESP_ERROR_CHECK(led_strip_set_pixel(led_strip, i, ARGB[i*3]* brightness / 100, ARGB[i*3+1]* brightness / 100, ARGB[i*3+2]* brightness / 100));
             }
             /* Refresh the strip to send data */
             ESP_ERROR_CHECK(led_strip_refresh(led_strip));

@@ -1,16 +1,65 @@
 #include "WS2812.h"
 
-
 uint8_t buffer[1024];
 uint8_t RGB[256*3];
-uint8_t MODE=0;
+uint8_t MODE=1;
 bool led_on_off = true;
 static const char *TAG="WS2812" ;
-uint8_t brightness = 2; // 百分比
+uint8_t brightness = 20; // 百分比
 
-
-
-
+struct Date_t
+{
+    uint8_t Hour;
+    uint8_t Minute;
+    uint8_t Second;
+    uint8_t Day;
+    uint8_t Month;
+    uint8_t Year;
+    uint8_t Week;
+};
+uint8_t Dates[256*3]={0};
+struct Date_t Date={
+    .Second=48,
+    .Minute=36,
+    .Hour=12,
+    .Week=1,
+};
+//miN E1 EA F1
+const uint8_t Code3x5[][15]={
+    {1,1,1,1,1,
+     1,0,0,0,1,
+     1,1,1,1,1},//0
+    {0,1,0,0,1,
+     1,1,1,1,1,
+     0,0,0,0,1},//1
+    {1,0,1,1,1,
+     1,0,1,0,1,
+     1,1,1,0,1},//2
+    {1,0,1,0,1,
+     1,0,1,0,1,
+     1,1,1,1,1},//3
+    {1,1,1,0,0,
+     0,0,1,0,0,
+     1,1,1,1,1},//4
+    {1,1,1,0,1,
+     1,0,1,0,1,
+     1,0,1,1,1},//5
+    {1,1,1,1,1,
+     1,0,1,0,1,
+     1,0,1,1,1},//6
+    {1,0,0,0,0,
+     1,0,0,0,0,
+     1,1,1,1,1},//7
+    {1,1,1,1,1,
+     1,0,1,0,1,
+     1,1,1,1,1},//8
+    {1,1,1,0,1,
+     1,0,1,0,1,
+     1,1,1,1,1},//9
+    {0,0,0,0,0,
+     0,1,0,1,0,
+     0,0,0,0,0},//:
+};
 
 int create_socket()
 {
@@ -30,7 +79,7 @@ void connect_to_server(int sockfd) {
     memset(&server_addr, 0, sizeof(server_addr));//清零初始化
     server_addr.sin_family = AF_INET;//设置地址族为IPv4
     server_addr.sin_port = htons(8080);//设置端口号为8080
-    inet_pton(AF_INET, "192.168.1.103", &server_addr.sin_addr); //将点分十进制的IP地址转换为二进制形式，并存储在server_addr.sin_addr中
+    inet_pton(AF_INET, "192.168.1.104", &server_addr.sin_addr); //将点分十进制的IP地址转换为二进制形式，并存储在server_addr.sin_addr中
  
     if (connect(sockfd, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {//连接服务器
         perror("connect");//以connect：形式输出错误信息
@@ -74,7 +123,70 @@ void Mode_0(led_strip_handle_t led_strip,int sockfd){
 }
 
 void Mode_1(led_strip_handle_t led_strip,int sockfd){
+       /*
+        for (uint8_t j = 0; j < 5; j++)
+        {
+            Dates[(0xe1+j)*3]=Code3x5[0][j]?0xff:0;
+            Dates[(0xea+j)*3]=Code3x5[0][j+5]?0xff:0;
+            Dates[(0xf1+j)*3]=Code3x5[0][j+10]?0xff:0;
+        }
+        */ 
+    for (uint8_t j = 0; j < 5; j++)
+    {
+        Dates[(225+j)*3]=Code3x5[Date.Second%10][j]?0xff:0;
+        Dates[(234+j)*3]=Code3x5[Date.Second%10][j+5]?0xff:0;
+        Dates[(241+j)*3]=Code3x5[Date.Second%10][j+10]?0xff:0;
 
+        Dates[(202+j)*3]=Code3x5[Date.Second/10][4-j]?0xff:0;
+        Dates[(209+j)*3]=Code3x5[Date.Second/10][4-j+5]?0xff:0;
+        Dates[(218+j)*3]=Code3x5[Date.Second/10][4-j+10]?0xff:0;
+
+
+        Dates[(193+j)*3]=Code3x5[10][j+5]?0xff:0;
+
+        Dates[(170+j)*3]=Code3x5[Date.Minute%10][4-j]?0xff:0;
+        Dates[(177+j)*3]=Code3x5[Date.Minute%10][4-j+5]?0xff:0;
+        Dates[(186+j)*3]=Code3x5[Date.Minute%10][4-j+10]?0xff:0;
+
+        Dates[(145+j)*3]=Code3x5[Date.Minute/10][j]?0xff:0;
+        Dates[(154+j)*3]=Code3x5[Date.Minute/10][j+5]?0xff:0;
+        Dates[(161+j)*3]=Code3x5[Date.Minute/10][j+10]?0xff:0;
+
+        Dates[(138+j)*3]=Code3x5[10][j+5]?0xff:0;
+
+        Dates[(113+j)*3]=Code3x5[Date.Hour%10][j]?0xff:0;
+        Dates[(122+j)*3]=Code3x5[Date.Hour%10][j+5]?0xff:0;
+        Dates[(129+j)*3]=Code3x5[Date.Hour%10][j+10]?0xff:0;
+
+        Dates[(90+j)*3]=Code3x5[Date.Hour/10][4-j]?0xff:0;
+        Dates[(97+j)*3]=Code3x5[Date.Hour/10][4-j+5]?0xff:0;
+        Dates[(106+j)*3]=Code3x5[Date.Hour/10][4-j+10]?0xff:0;
+    }
+    if (Date.Week==7){Dates[(88)*3+2]=0xff;Dates[(103)*3+2]=0xff;}
+    else{Dates[(88)*3+1]=0xff;Dates[(103)*3+1]=0xff;}
+    if (Date.Week==1){Dates[(119)*3+2]=0xff;Dates[(120)*3+2]=0xff;}
+    else{Dates[(119)*3+1]=0xff;Dates[(120)*3+1]=0xff;}
+    if (Date.Week==2){Dates[(136)*3+2]=0xff;Dates[(151)*3+2]=0xff;}
+    else{Dates[(136)*3+1]=0xff;Dates[(151)*3+1]=0xff;}
+    if (Date.Week==3){Dates[(167)*3+2]=0xff;Dates[(168)*3+2]=0xff;}
+    else{Dates[(167)*3+1]=0xff;Dates[(168)*3+1]=0xff;}
+    if (Date.Week==4){Dates[(184)*3+2]=0xff;Dates[(199)*3+2]=0xff;}
+    else{Dates[(184)*3+1]=0xff;Dates[(199)*3+1]=0xff;}
+    if (Date.Week==5){Dates[(215)*3+2]=0xff;Dates[(216)*3+2]=0xff;}
+    else{Dates[(215)*3+1]=0xff;Dates[(216)*3+1]=0xff;}
+    if (Date.Week==6){Dates[(232)*3+2]=0xff;Dates[(247)*3+2]=0xff;}
+    else{Dates[(232)*3+1]=0xff;Dates[(247)*3+1]=0xff;}
+    
+    
+   
+    
+    
+    
+
+    WS2812_Updata(led_strip,led_on_off,Dates,brightness);
+    //send(sockfd, Dates,256*3, 0);
+    uint8_t a=Date.Second%10;
+    send(sockfd, &a,1, 0);
 }
 
 
@@ -105,7 +217,7 @@ void app_main(void)
     
     WS2812_Updata(led_strip,1,RGB,brightness);
     err = send(sockfd, "hello ESP32!", 12, 0);
-
+    Mode_1(led_strip,sockfd);
     while (1)
     {
 
@@ -119,7 +231,7 @@ void app_main(void)
             switch (buffer[0])
             {
             case 0xEF:
-                MODE=buffer[1];
+                MODE=buffer[1];send(sockfd, "MODE CHANGE", 12, 0);
                 break;
             default:
                 switch (MODE)

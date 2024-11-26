@@ -1,0 +1,28 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable WS2812.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+[9/10] cd /home/ep_hdy/Code/ESP32/WS2812/build/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ep_hdy/Code/ESP32/WS2812/build/partition_table/partition-table.bin /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+WS2812.bin binary size 0xc43a0 bytes. Smallest app partition is 0x100000 bytes. 0x3bc60 bytes (23%) free.
+[9/10] cd /home/ep_hdy/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ep_hdy/esp/esp-idf -D "SERIAL_TOOL=/home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/ep_hdy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ep_hdy/Code/ESP32/WS2812/build -P /home/ep_hdy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 WS2812.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting......................................
+
+A fatal error occurred: Failed to connect to ESP32: Download mode successfully detected, but getting no sync reply: The serial TX path seems to be down.
+For troubleshooting steps visit: https://docs.espressif.com/projects/esptool/en/latest/troubleshooting.html
+FAILED: CMakeFiles/flash /home/ep_hdy/Code/ESP32/WS2812/build/CMakeFiles/flash 
+cd /home/ep_hdy/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ep_hdy/esp/esp-idf -D "SERIAL_TOOL=/home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/ep_hdy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ep_hdy/Code/ESP32/WS2812/build -P /home/ep_hdy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

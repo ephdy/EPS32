@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "WS2812",
-    "project_version":    "82baa93-dirty",
+    "project_version":    "22cfe03-dirty",
     "project_path":       "/home/ep_hdy/Code/ESP32/WS2812",
     "idf_path":           "/home/ep_hdy/esp/esp-idf",
     "build_dir":          "/home/ep_hdy/Code/ESP32/WS2812/build",

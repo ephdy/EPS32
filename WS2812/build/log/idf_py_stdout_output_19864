@@ -1,0 +1,71 @@
+[1/5] cd /home/ep_hdy/Code/ESP32/WS2812/build/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ep_hdy/Code/ESP32/WS2812/build/partition_table/partition-table.bin /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+WS2812.bin binary size 0xc42e0 bytes. Smallest app partition is 0x100000 bytes. 0x3bd20 bytes (23%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/ep_hdy/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ep_hdy/esp/esp-idf -D "SERIAL_TOOL=/home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/ep_hdy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ep_hdy/Code/ESP32/WS2812/build -P /home/ep_hdy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 WS2812.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 8c:4f:00:10:0e:d8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16343...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16343 compressed) at 0x00001000 in 0.8 seconds (effective 274.0 kbit/s)...
+Hash of data verified.
+Compressed 803552 bytes to 509726...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cfe6... (6 %)
+Writing at 0x00024fe3... (9 %)
+Writing at 0x00029cbe... (12 %)
+Writing at 0x0003492b... (15 %)
+Writing at 0x0003acc3... (18 %)
+Writing at 0x000406af... (21 %)
+Writing at 0x000462bb... (25 %)
+Writing at 0x0004beab... (28 %)
+Writing at 0x00051aca... (31 %)
+Writing at 0x0005726f... (34 %)
+Writing at 0x0005cf60... (37 %)
+Writing at 0x00062bf7... (40 %)
+Writing at 0x00068942... (43 %)
+Writing at 0x0006e5e2... (46 %)
+Writing at 0x00074950... (50 %)
+Writing at 0x00079cb8... (53 %)
+Writing at 0x0007f111... (56 %)
+Writing at 0x00084614... (59 %)
+Writing at 0x000899d3... (62 %)
+Writing at 0x0008f06c... (65 %)
+Writing at 0x000947bf... (68 %)
+Writing at 0x0009a4d1... (71 %)
+Writing at 0x0009fce8... (75 %)
+Writing at 0x000a59c9... (78 %)
+Writing at 0x000ab3d1... (81 %)
+Writing at 0x000b0cf4... (84 %)
+Writing at 0x000baca9... (87 %)
+Writing at 0x000c2349... (90 %)
+Writing at 0x000c8197... (93 %)
+Writing at 0x000ce187... (96 %)
+Writing at 0x000d35cb... (100 %)
+Wrote 803552 bytes (509726 compressed) at 0x00010000 in 12.1 seconds (effective 529.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 654.0 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
