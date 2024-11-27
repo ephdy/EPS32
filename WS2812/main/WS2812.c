@@ -1,11 +1,11 @@
 #include "WS2812.h"
 
 uint8_t buffer[1024];
-uint8_t RGB[256*3];
+uint32_t RGB[256];
 uint8_t MODE=1;
 bool led_on_off = true;
 static const char *TAG="WS2812" ;
-uint8_t brightness = 20; // 百分比
+uint8_t brightness = 10; // 百分比
 
 struct Date_t
 {
@@ -17,7 +17,7 @@ struct Date_t
     uint8_t Year;
     uint8_t Week;
 };
-uint8_t Dates[256*3]={0};
+uint32_t Dates[256]={0};
 struct Date_t Date={
     .Second=48,
     .Minute=36,
@@ -123,70 +123,54 @@ void Mode_0(led_strip_handle_t led_strip,int sockfd){
 }
 
 void Mode_1(led_strip_handle_t led_strip,int sockfd){
-       /*
-        for (uint8_t j = 0; j < 5; j++)
-        {
-            Dates[(0xe1+j)*3]=Code3x5[0][j]?0xff:0;
-            Dates[(0xea+j)*3]=Code3x5[0][j+5]?0xff:0;
-            Dates[(0xf1+j)*3]=Code3x5[0][j+10]?0xff:0;
-        }
-        */ 
+
     for (uint8_t j = 0; j < 5; j++)
     {
-        Dates[(225+j)*3]=Code3x5[Date.Second%10][j]?0xff:0;
-        Dates[(234+j)*3]=Code3x5[Date.Second%10][j+5]?0xff:0;
-        Dates[(241+j)*3]=Code3x5[Date.Second%10][j+10]?0xff:0;
+        Dates[225+j]=Code3x5[Date.Second%10][j]?TimeColor:0;
+        Dates[234+j]=Code3x5[Date.Second%10][j+5]?TimeColor:0;
+        Dates[241+j]=Code3x5[Date.Second%10][j+10]?TimeColor:0;
 
-        Dates[(202+j)*3]=Code3x5[Date.Second/10][4-j]?0xff:0;
-        Dates[(209+j)*3]=Code3x5[Date.Second/10][4-j+5]?0xff:0;
-        Dates[(218+j)*3]=Code3x5[Date.Second/10][4-j+10]?0xff:0;
+        Dates[202+j]=Code3x5[Date.Second/10][4-j]?TimeColor:0;
+        Dates[209+j]=Code3x5[Date.Second/10][4-j+5]?TimeColor:0;
+        Dates[218+j]=Code3x5[Date.Second/10][4-j+10]?TimeColor:0;
 
 
-        Dates[(193+j)*3]=Code3x5[10][j+5]?0xff:0;
+        Dates[193+j]=Code3x5[10][j+5]?TimeColor:0;
 
-        Dates[(170+j)*3]=Code3x5[Date.Minute%10][4-j]?0xff:0;
-        Dates[(177+j)*3]=Code3x5[Date.Minute%10][4-j+5]?0xff:0;
-        Dates[(186+j)*3]=Code3x5[Date.Minute%10][4-j+10]?0xff:0;
+        Dates[170+j]=Code3x5[Date.Minute%10][4-j]?TimeColor:0;
+        Dates[177+j]=Code3x5[Date.Minute%10][4-j+5]?TimeColor:0;
+        Dates[186+j]=Code3x5[Date.Minute%10][4-j+10]?TimeColor:0;
 
-        Dates[(145+j)*3]=Code3x5[Date.Minute/10][j]?0xff:0;
-        Dates[(154+j)*3]=Code3x5[Date.Minute/10][j+5]?0xff:0;
-        Dates[(161+j)*3]=Code3x5[Date.Minute/10][j+10]?0xff:0;
+        Dates[145+j]=Code3x5[Date.Minute/10][j]?TimeColor:0;
+        Dates[154+j]=Code3x5[Date.Minute/10][j+5]?TimeColor:0;
+        Dates[161+j]=Code3x5[Date.Minute/10][j+10]?TimeColor:0;
 
-        Dates[(138+j)*3]=Code3x5[10][j+5]?0xff:0;
+        Dates[138+j]=Code3x5[10][j+5]?TimeColor:0;
 
-        Dates[(113+j)*3]=Code3x5[Date.Hour%10][j]?0xff:0;
-        Dates[(122+j)*3]=Code3x5[Date.Hour%10][j+5]?0xff:0;
-        Dates[(129+j)*3]=Code3x5[Date.Hour%10][j+10]?0xff:0;
+        Dates[113+j]=Code3x5[Date.Hour%10][j]?TimeColor:0;
+        Dates[122+j]=Code3x5[Date.Hour%10][j+5]?TimeColor:0;
+        Dates[129+j]=Code3x5[Date.Hour%10][j+10]?TimeColor:0;
 
-        Dates[(90+j)*3]=Code3x5[Date.Hour/10][4-j]?0xff:0;
-        Dates[(97+j)*3]=Code3x5[Date.Hour/10][4-j+5]?0xff:0;
-        Dates[(106+j)*3]=Code3x5[Date.Hour/10][4-j+10]?0xff:0;
+        Dates[90+j]=Code3x5[Date.Hour/10][4-j]?TimeColor:0;
+        Dates[97+j]=Code3x5[Date.Hour/10][4-j+5]?TimeColor:0;
+        Dates[106+j]=Code3x5[Date.Hour/10][4-j+10]?TimeColor:0;
     }
-    if (Date.Week==7){Dates[(88)*3+2]=0xff;Dates[(103)*3+2]=0xff;}
-    else{Dates[(88)*3+1]=0xff;Dates[(103)*3+1]=0xff;}
-    if (Date.Week==1){Dates[(119)*3+2]=0xff;Dates[(120)*3+2]=0xff;}
-    else{Dates[(119)*3+1]=0xff;Dates[(120)*3+1]=0xff;}
-    if (Date.Week==2){Dates[(136)*3+2]=0xff;Dates[(151)*3+2]=0xff;}
-    else{Dates[(136)*3+1]=0xff;Dates[(151)*3+1]=0xff;}
-    if (Date.Week==3){Dates[(167)*3+2]=0xff;Dates[(168)*3+2]=0xff;}
-    else{Dates[(167)*3+1]=0xff;Dates[(168)*3+1]=0xff;}
-    if (Date.Week==4){Dates[(184)*3+2]=0xff;Dates[(199)*3+2]=0xff;}
-    else{Dates[(184)*3+1]=0xff;Dates[(199)*3+1]=0xff;}
-    if (Date.Week==5){Dates[(215)*3+2]=0xff;Dates[(216)*3+2]=0xff;}
-    else{Dates[(215)*3+1]=0xff;Dates[(216)*3+1]=0xff;}
-    if (Date.Week==6){Dates[(232)*3+2]=0xff;Dates[(247)*3+2]=0xff;}
-    else{Dates[(232)*3+1]=0xff;Dates[(247)*3+1]=0xff;}
+    Dates[88]=(Date.Week==7)? WeekColor_1:WeekColor_0;
+    Dates[103]=(Date.Week==7)?WeekColor_1:WeekColor_0;
+    Dates[119]=(Date.Week==1)?WeekColor_1:WeekColor_0;
+    Dates[120]=(Date.Week==1)?WeekColor_1:WeekColor_0;
+    Dates[136]=(Date.Week==2)?WeekColor_1:WeekColor_0;
+    Dates[151]=(Date.Week==2)?WeekColor_1:WeekColor_0;
+    Dates[167]=(Date.Week==3)?WeekColor_1:WeekColor_0;
+    Dates[168]=(Date.Week==3)?WeekColor_1:WeekColor_0;
+    Dates[184]=(Date.Week==4)?WeekColor_1:WeekColor_0;
+    Dates[199]=(Date.Week==4)?WeekColor_1:WeekColor_0;
+    Dates[215]=(Date.Week==5)?WeekColor_1:WeekColor_0;
+    Dates[216]=(Date.Week==5)?WeekColor_1:WeekColor_0;
+    Dates[232]=(Date.Week==6)?WeekColor_1:WeekColor_0;
+    Dates[247]=(Date.Week==6)?WeekColor_1:WeekColor_0;
     
-    
-   
-    
-    
-    
-
     WS2812_Updata(led_strip,led_on_off,Dates,brightness);
-    //send(sockfd, Dates,256*3, 0);
-    uint8_t a=Date.Second%10;
-    send(sockfd, &a,1, 0);
 }
 
 
@@ -210,10 +194,7 @@ void app_main(void)
     connect_to_server(sockfd);//将套接字连接服务器
     vTaskDelay(1000 / portTICK_PERIOD_MS);//延时1s
 
-    for (uint16_t i = 0; i < 256*3; i++)
-    {
-        RGB[i]=255;
-    }
+
     
     WS2812_Updata(led_strip,1,RGB,brightness);
     err = send(sockfd, "hello ESP32!", 12, 0);

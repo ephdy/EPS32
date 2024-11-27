@@ -6,7 +6,13 @@
     "wifi_sta.h": "c",
     "functional": "c",
     "socket.h": "c",
-    "ws2812.h": "c"
+    "ws2812.h": "c",
+    "stdio.h": "c",
+    "err.h": "c",
+    "event_groups.h": "c",
+    "esp_event.h": "c",
+    "esp_wifi.h": "c",
+    "esp_log.h": "c"
   },
   "idf.port": "/dev/ttyUSB0",
   "idf.adapterTargetName": "esp32"
