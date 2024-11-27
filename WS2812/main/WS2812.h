@@ -23,6 +23,14 @@
 #include "WIFI_STA.h"
 #include "RMT_WS2812.h"
 
+
+#include <time.h>
+#include <sys/time.h>
+#include "esp_attr.h"
+#include "esp_netif_sntp.h"
+#include "lwip/ip_addr.h"
+#include "esp_sntp.h"
+
 #define TimeColor               DeepSkyBlue
 #define WeekColor_0             SeaGreen
 #define WeekColor_1             Khaki

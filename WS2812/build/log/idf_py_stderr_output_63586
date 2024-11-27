@@ -1,0 +1,110 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+[0m
+[0;33m--- 0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081826: panic_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/panic.c:466
+0x40089c35: esp_system_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400918a1: abort at /home/ep_hdy/esp/esp-idf/components/newlib/abort.c:38
+0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+0x400d7612: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:203
+0x4015b683: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+[0m
+[0;33m--- 0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081826: panic_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/panic.c:466
+0x40089c35: esp_system_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400918a1: abort at /home/ep_hdy/esp/esp-idf/components/newlib/abort.c:38
+0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+0x400d7612: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:203
+0x4015b683: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+[0m
+[0;33m--- 0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081826: panic_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/panic.c:466
+0x40089c35: esp_system_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400918a1: abort at /home/ep_hdy/esp/esp-idf/components/newlib/abort.c:38
+0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+0x400d7612: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:203
+0x4015b683: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+[0m
+[0;33m--- 0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081826: panic_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/panic.c:466
+0x40089c35: esp_system_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400918a1: abort at /home/ep_hdy/esp/esp-idf/components/newlib/abort.c:38
+0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+0x400d7612: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:203
+0x4015b683: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+[0m
+[0;33m--- 0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081826: panic_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/panic.c:466
+0x40089c35: esp_system_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400918a1: abort at /home/ep_hdy/esp/esp-idf/components/newlib/abort.c:38
+0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+0x400d7612: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:203
+0x4015b683: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+[0m
+[0;33m--- 0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081826: panic_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/panic.c:466
+0x40089c35: esp_system_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400918a1: abort at /home/ep_hdy/esp/esp-idf/components/newlib/abort.c:38
+0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+0x400d7612: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:203
+0x4015b683: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+[0m
+[0;33m--- 0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081826: panic_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/panic.c:466
+0x40089c35: esp_system_abort at /home/ep_hdy/esp/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400918a1: abort at /home/ep_hdy/esp/esp-idf/components/newlib/abort.c:38
+0x40089c2b: _esp_error_check_failed at /home/ep_hdy/esp/esp-idf/components/esp_system/esp_err.c:50
+0x400d6f5b: obtain_time at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:257 (discriminator 1)
+0x400d7612: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:203
+0x4015b683: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m
