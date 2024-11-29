@@ -1,0 +1,110 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c: In function 'initialize_sntp':
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:245:5: warning: 'sntp_setoperatingmode' is deprecated: use esp_sntp_setoperatingmode() instead [-Wdeprecated-declarations]
+  245 |     sntp_setoperatingmode(SNTP_OPMODE_POLL);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.h:32,
+                 from /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:1:
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:249:6: note: declared here
+  249 | void sntp_setoperatingmode(u8_t operating_mode)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:246:5: warning: 'sntp_setservername' is deprecated: use esp_sntp_setservername() instead [-Wdeprecated-declarations]
+  246 |     sntp_setservername(0, "pool.ntp.org");
+      |     ^~~~~~~~~~~~~~~~~~
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:263:6: note: declared here
+  263 | void sntp_setservername(u8_t idx, const char *server)
+      |      ^~~~~~~~~~~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:251:5: warning: 'sntp_init' is deprecated: use esp_sntp_init() instead [-Wdeprecated-declarations]
+  251 |     sntp_init();
+      |     ^~~~~~~~~
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:269:6: note: declared here
+  269 | void sntp_init(void)
+      |      ^~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c: In function 'obtain_time':
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:261:5: warning: 'sntp_servermode_dhcp' is deprecated: use esp_sntp_servermode_dhcp() instead [-Wdeprecated-declarations]
+  261 |     sntp_servermode_dhcp(1);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:255:6: note: declared here
+  255 | void sntp_servermode_dhcp(int set_servers_from_dhcp)
+      |      ^~~~~~~~~~~~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable WS2812.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+[9/10] cd /home/ep_hdy/Code/ESP32/WS2812/build/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ep_hdy/Code/ESP32/WS2812/build/partition_table/partition-table.bin /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+WS2812.bin binary size 0xc9d80 bytes. Smallest app partition is 0x100000 bytes. 0x36280 bytes (21%) free.
+[9/10] cd /home/ep_hdy/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ep_hdy/esp/esp-idf -D "SERIAL_TOOL=/home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/ep_hdy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ep_hdy/Code/ESP32/WS2812/build -P /home/ep_hdy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 WS2812.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:31:d8:3c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000d9fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16343...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16343 compressed) at 0x00001000 in 0.7 seconds (effective 288.5 kbit/s)...
+Hash of data verified.
+Compressed 826752 bytes to 524696...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d001... (6 %)
+Writing at 0x0002521d... (9 %)
+Writing at 0x00029f0c... (12 %)
+Writing at 0x00034a61... (15 %)
+Writing at 0x0003af48... (18 %)
+Writing at 0x0004093a... (21 %)
+Writing at 0x000464c9... (24 %)
+Writing at 0x0004c104... (27 %)
+Writing at 0x00051d7f... (30 %)
+Writing at 0x000575fc... (33 %)
+Writing at 0x0005d2c8... (36 %)
+Writing at 0x00062f60... (39 %)
+Writing at 0x00068ac2... (42 %)
+Writing at 0x0006e911... (45 %)
+Writing at 0x000742d7... (48 %)
+Writing at 0x0007a3a8... (51 %)
+Writing at 0x0007f6cd... (54 %)
+Writing at 0x00084c1f... (57 %)
+Writing at 0x00089e5f... (60 %)
+Writing at 0x0008f600... (63 %)
+Writing at 0x00094cb6... (66 %)
+Writing at 0x0009a8a0... (69 %)
+Writing at 0x000a00be... (72 %)
+Writing at 0x000a5ce2... (75 %)
+Writing at 0x000ab887... (78 %)
+Writing at 0x000b109e... (81 %)
+Writing at 0x000b6ebd... (84 %)
+Writing at 0x000c0cfc... (87 %)
+Writing at 0x000c840b... (90 %)
+Writing at 0x000ce66e... (93 %)
+Writing at 0x000d4391... (96 %)
+Writing at 0x000d9b7f... (100 %)
+Wrote 826752 bytes (524696 compressed) at 0x00010000 in 12.5 seconds (effective 530.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 557.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,0 +1,104 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 13 2024 11:14:37[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22408h (140296) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=00032430 vaddr=3ffb0000 size=03dd4h ( 15828) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=0003620c vaddr=40080000 size=09e0ch ( 40460) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=8cffch (577532) map[0m
+[0;32mI (373) esp_image: segment 4: paddr=000cd024 vaddr=40089e0c size=0dc58h ( 56408) load[0m
+[0;32mI (407) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (407) boot: Disabling RNG early entropy source...[0m
+[0;32mI (418) cpu_start: Multicore app[0m
+[0;32mI (428) cpu_start: Pro cpu start user code[0m
+[0;32mI (428) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (428) cpu_start: Application information:[0m
+[0;32mI (431) cpu_start: Project name:     WS2812[0m
+[0;32mI (436) cpu_start: App version:      d236447-dirty[0m
+[0;32mI (441) cpu_start: Compile time:     Nov 27 2024 19:03:59[0m
+[0;32mI (447) cpu_start: ELF file SHA256:  7063f851d...[0m
+[0;32mI (452) cpu_start: ESP-IDF:          v5.2.3[0m
+[0;32mI (457) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (462) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (467) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (472) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (479) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (485) heap_init: At 3FFB8C40 len 000273C0 (156 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 40097A64 len 0000859C (33 KiB): IRAM[0m
+[0;32mI (512) spi_flash: detected chip: generic[0m
+[0;32mI (515) spi_flash: flash io: dio[0m
+[0;33mW (519) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (533) main_task: Started on CPU0[0m
+[0;32mI (543) main_task: Calling app_main()[0m
+[0;32mI (543) WS2812: ws2812 start[0m
+[0;32mI (543) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (573) WS2812: ESP_WIFI_MODE_STA[0m
+[0;32mI (583) wifi:wifi driver task: 3ffc12ac, prio:23, stack:6656, core=0[0m
+[0;32mI (593) wifi:wifi firmware version: 82f54d2[0m
+[0;32mI (593) wifi:wifi certification version: v7.0[0m
+[0;32mI (593) wifi:config NVS flash: enabled[0m
+[0;32mI (593) wifi:config nano formating: disabled[0m
+[0;32mI (593) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (603) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (603) wifi:Init management short buffer num: 32[0m
+[0;32mI (613) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (613) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (623) wifi:Init static rx buffer num: 10[0m
+[0;32mI (623) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (623) wifi_init: rx ba win: 6[0m
+[0;32mI (633) wifi_init: tcpip mbox: 32[0m
+[0;32mI (633) wifi_init: udp mbox: 6[0m
+[0;32mI (633) wifi_init: tcp mbox: 6[0m
+[0;32mI (643) wifi_init: tcp tx win: 5760[0m
+[0;32mI (643) wifi_init: tcp rx win: 5760[0m
+[0;32mI (653) wifi_init: tcp mss: 1440[0m
+[0;32mI (653) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (653) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (663) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (753) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (813) wifi:mode : sta (cc:db:a7:31:d8:3c)[0m
+[0;32mI (813) wifi:enable tsf[0m
+[0;32mI (813) wifi station: wifi_init_sta finished.[0m
+[0;32mI (843) wifi:new:<13,2>, old:<1,0>, ap:<255,255>, sta:<13,2>, prof:1[0m
+[0;32mI (843) wifi:state: init -> auth (b0)[0m
+[0;32mI (863) wifi:state: auth -> assoc (0)[0m
+[0;32mI (873) wifi:state: assoc -> run (10)[0m
+[0;32mI (903) wifi:connected with C7, aid = 1, channel 13, 40D, bssid = bc:5f:f6:4c:4f:e6[0m
+[0;32mI (903) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (913) wifi:pm start, type: 1[0m
+
+[0;32mI (913) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (943) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (953) wifi:<ba-add>idx:0 (ifx:0, bc:5f:f6:4c:4f:e6), tid:0, ssn:4, winSize:64[0m
+[0;32mI (1923) esp_netif_handlers: sta ip: 192.168.1.106, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1923) wifi station: got ip:192.168.1.106[0m
+[0;32mI (1923) wifi station: connected to ap SSID:C7 password:98765432[0m
+[0;32mI (2943) WS2812: Initializing SNTP[0m
+[0;32mI (2943) WS2812: Waiting for system time to be set... (1/10)[0m
+[0;32mI (4943) WS2812: Waiting for system time to be set... (2/10)[0m
+[0;32mI (6943) WS2812: Waiting for system time to be set... (3/10)[0m
+[0;32mI (8943) WS2812: The current date/time in Shanghai is: Thu Nov 28 11:25:13 2024[0m

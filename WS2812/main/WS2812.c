@@ -7,26 +7,13 @@ uint32_t RGB[256];
 uint8_t MODE=1;
 bool led_on_off = true;
 static const char *TAG="WS2812" ;
-uint8_t brightness = 10; // 百分比
+uint8_t brightness = 5; // 百分比
 
-struct Date_t
-{
-    uint8_t Hour;
-    uint8_t Minute;
-    uint8_t Second;
-    uint8_t Day;
-    uint8_t Month;
-    uint8_t Year;
-    uint8_t Week;
-};
+time_t now = 0;
+struct tm timeinfo = { 0 };
+
 uint32_t Dates[256]={0};
-struct Date_t Date={
-    .Second=48,
-    .Minute=36,
-    .Hour=12,
-    .Week=1,
-};
-//miN E1 EA F1
+
 const uint8_t Code3x5[][15]={
     {1,1,1,1,1,
      1,0,0,0,1,
@@ -125,54 +112,67 @@ void Mode_0(led_strip_handle_t led_strip,int sockfd){
 }
 
 void Mode_1(led_strip_handle_t led_strip,int sockfd){
+    //obtain_time();
 
+    ESP_LOGI(TAG, "asdsadsads");
+    time(&now);
+    localtime_r(&now, &timeinfo);
+    //char strftime_buf[64];
+    //strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
+    //ESP_LOGI(TAG, "The current date/time in Shanghai is: %s", strftime_buf);
+        
+    
     for (uint8_t j = 0; j < 5; j++)
     {
-        Dates[225+j]=Code3x5[Date.Second%10][j]?TimeColor:0;
-        Dates[234+j]=Code3x5[Date.Second%10][j+5]?TimeColor:0;
-        Dates[241+j]=Code3x5[Date.Second%10][j+10]?TimeColor:0;
+        Dates[225+j]=Code3x5[timeinfo.tm_sec%10][j]?TimeColor:0;
+        Dates[234+j]=Code3x5[timeinfo.tm_sec%10][9-j]?TimeColor:0;
+        Dates[241+j]=Code3x5[timeinfo.tm_sec%10][j+10]?TimeColor:0;
 
-        Dates[202+j]=Code3x5[Date.Second/10][4-j]?TimeColor:0;
-        Dates[209+j]=Code3x5[Date.Second/10][4-j+5]?TimeColor:0;
-        Dates[218+j]=Code3x5[Date.Second/10][4-j+10]?TimeColor:0;
+        Dates[202+j]=Code3x5[timeinfo.tm_sec/10][4-j]?TimeColor:0;
+        Dates[209+j]=Code3x5[timeinfo.tm_sec/10][j+5]?TimeColor:0;
+        Dates[218+j]=Code3x5[timeinfo.tm_sec/10][14-j]?TimeColor:0;
 
 
         Dates[193+j]=Code3x5[10][j+5]?TimeColor:0;
 
-        Dates[170+j]=Code3x5[Date.Minute%10][4-j]?TimeColor:0;
-        Dates[177+j]=Code3x5[Date.Minute%10][4-j+5]?TimeColor:0;
-        Dates[186+j]=Code3x5[Date.Minute%10][4-j+10]?TimeColor:0;
+        Dates[170+j]=Code3x5[timeinfo.tm_min%10][4-j]?TimeColor:0;
+        Dates[177+j]=Code3x5[timeinfo.tm_min%10][j+5]?TimeColor:0;
+        Dates[186+j]=Code3x5[timeinfo.tm_min%10][14-j]?TimeColor:0;
 
-        Dates[145+j]=Code3x5[Date.Minute/10][j]?TimeColor:0;
-        Dates[154+j]=Code3x5[Date.Minute/10][j+5]?TimeColor:0;
-        Dates[161+j]=Code3x5[Date.Minute/10][j+10]?TimeColor:0;
+        Dates[145+j]=Code3x5[timeinfo.tm_min/10][j]?TimeColor:0;
+        Dates[154+j]=Code3x5[timeinfo.tm_min/10][9-j]?TimeColor:0;
+        Dates[161+j]=Code3x5[timeinfo.tm_min/10][j+10]?TimeColor:0;
 
         Dates[138+j]=Code3x5[10][j+5]?TimeColor:0;
 
-        Dates[113+j]=Code3x5[Date.Hour%10][j]?TimeColor:0;
-        Dates[122+j]=Code3x5[Date.Hour%10][j+5]?TimeColor:0;
-        Dates[129+j]=Code3x5[Date.Hour%10][j+10]?TimeColor:0;
+        Dates[113+j]=Code3x5[timeinfo.tm_hour%10][j]?TimeColor:0;
+        Dates[122+j]=Code3x5[timeinfo.tm_hour%10][9-j]?TimeColor:0;
+        Dates[129+j]=Code3x5[timeinfo.tm_hour%10][j+10]?TimeColor:0;
 
-        Dates[90+j]=Code3x5[Date.Hour/10][4-j]?TimeColor:0;
-        Dates[97+j]=Code3x5[Date.Hour/10][4-j+5]?TimeColor:0;
-        Dates[106+j]=Code3x5[Date.Hour/10][4-j+10]?TimeColor:0;
+        Dates[90+j]=Code3x5[timeinfo.tm_hour/10][4-j]?TimeColor:0;
+        Dates[97+j]=Code3x5[timeinfo.tm_hour/10][j+5]?TimeColor:0;
+        Dates[106+j]=Code3x5[timeinfo.tm_hour/10][14-j]?TimeColor:0;
     }
-    Dates[88]=(Date.Week==7)? WeekColor_1:WeekColor_0;
-    Dates[103]=(Date.Week==7)?WeekColor_1:WeekColor_0;
-    Dates[119]=(Date.Week==1)?WeekColor_1:WeekColor_0;
-    Dates[120]=(Date.Week==1)?WeekColor_1:WeekColor_0;
-    Dates[136]=(Date.Week==2)?WeekColor_1:WeekColor_0;
-    Dates[151]=(Date.Week==2)?WeekColor_1:WeekColor_0;
-    Dates[167]=(Date.Week==3)?WeekColor_1:WeekColor_0;
-    Dates[168]=(Date.Week==3)?WeekColor_1:WeekColor_0;
-    Dates[184]=(Date.Week==4)?WeekColor_1:WeekColor_0;
-    Dates[199]=(Date.Week==4)?WeekColor_1:WeekColor_0;
-    Dates[215]=(Date.Week==5)?WeekColor_1:WeekColor_0;
-    Dates[216]=(Date.Week==5)?WeekColor_1:WeekColor_0;
-    Dates[232]=(Date.Week==6)?WeekColor_1:WeekColor_0;
-    Dates[247]=(Date.Week==6)?WeekColor_1:WeekColor_0;
-    
+    Dates[88]=(timeinfo.tm_wday==0)? WeekColor_1:WeekColor_0;
+    Dates[103]=(timeinfo.tm_wday==0)?WeekColor_1:WeekColor_0;
+    Dates[119]=(timeinfo.tm_wday==1)?WeekColor_1:WeekColor_0;
+    Dates[120]=(timeinfo.tm_wday==1)?WeekColor_1:WeekColor_0;
+    Dates[136]=(timeinfo.tm_wday==2)?WeekColor_1:WeekColor_0;
+    Dates[151]=(timeinfo.tm_wday==2)?WeekColor_1:WeekColor_0;
+    Dates[167]=(timeinfo.tm_wday==3)?WeekColor_1:WeekColor_0;
+    Dates[168]=(timeinfo.tm_wday==3)?WeekColor_1:WeekColor_0;
+    Dates[184]=(timeinfo.tm_wday==4)?WeekColor_1:WeekColor_0;
+    Dates[199]=(timeinfo.tm_wday==4)?WeekColor_1:WeekColor_0;
+    Dates[215]=(timeinfo.tm_wday==5)?WeekColor_1:WeekColor_0;
+    Dates[216]=(timeinfo.tm_wday==5)?WeekColor_1:WeekColor_0;
+    Dates[232]=(timeinfo.tm_wday==6)?WeekColor_1:WeekColor_0;
+    Dates[247]=(timeinfo.tm_wday==6)?WeekColor_1:WeekColor_0;
+
     WS2812_Updata(led_strip,led_on_off,Dates,brightness);
+    vTaskDelay(100 / portTICK_PERIOD_MS);//延时0.1s
+    //const int deep_sleep_sec = 1;
+    //esp_deep_sleep(1000000LL * deep_sleep_sec);
+
 }
 
 
@@ -196,13 +196,10 @@ void app_main(void)
     connect_to_server(sockfd);//将套接字连接服务器
     vTaskDelay(1000 / portTICK_PERIOD_MS);//延时1s
     
-
     obtain_time();
-    
     
     WS2812_Updata(led_strip,1,RGB,brightness);
     err = send(sockfd, "hello ESP32!", 12, 0);
-    Mode_1(led_strip,sockfd);
     while (1)
     {
 
@@ -212,7 +209,7 @@ void app_main(void)
 
         err = recv(sockfd, buffer, sizeof(buffer), 0x08);//通过套接字接收服务器发送的网络数据
         if(err > 0){
-            send(sockfd, "ESP32 Get!", 10, 0);
+            
             switch (buffer[0])
             {
             case 0xEF:
@@ -233,7 +230,20 @@ void app_main(void)
                 break;
             }
             
-            }
+        }
+        else{
+            switch (MODE)
+                {
+                case 0:
+                    Mode_0(led_strip,sockfd);
+                    break;
+                case 1:
+                    Mode_1(led_strip,sockfd);
+                    break;
+                default:
+                    break;
+                }
+        }
 
     }
     
@@ -245,10 +255,6 @@ static void initialize_sntp(void)
     ESP_LOGI(TAG, "Initializing SNTP");
     sntp_setoperatingmode(SNTP_OPMODE_POLL);
     sntp_setservername(0, "pool.ntp.org");
-    //sntp_set_time_sync_notification_cb(time_sync_notification_cb);
-#ifdef CONFIG_SNTP_TIME_SYNC_METHOD_SMOOTH
-    sntp_set_sync_mode(SNTP_SYNC_MODE_SMOOTH);
-#endif
     sntp_init();
 }
 
@@ -265,8 +271,7 @@ static void obtain_time(void)
     initialize_sntp();
  
     // wait for time to be set
-    time_t now = 0;
-    struct tm timeinfo = { 0 };
+
     int retry = 0;
     const int retry_count = 10;
     while (sntp_get_sync_status() == SNTP_SYNC_STATUS_RESET && ++retry < retry_count) {
@@ -276,13 +281,47 @@ static void obtain_time(void)
     time(&now);
     localtime_r(&now, &timeinfo);
 
-    char strftime_buf[64];
+    
     setenv("TZ", "CST-8", 1);
     tzset();
     localtime_r(&now, &timeinfo);
+    char strftime_buf[64];
     strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
     ESP_LOGI(TAG, "The current date/time in Shanghai is: %s", strftime_buf);
- 
+    
+    esp_netif_sntp_deinit();
     //ESP_ERROR_CHECK( example_disconnect() );
+    /*
+    for (uint8_t j = 0; j < 5; j++)
+    {
+        Dates[225+j]=Code3x5[timeinfo.tm_sec%10][j]?TimeColor:0;
+        Dates[234+j]=Code3x5[timeinfo.tm_sec%10][j+5]?TimeColor:0;
+        Dates[241+j]=Code3x5[timeinfo.tm_sec%10][j+10]?TimeColor:0;
+
+        Dates[202+j]=Code3x5[timeinfo.tm_sec/10][4-j]?TimeColor:0;
+        Dates[209+j]=Code3x5[timeinfo.tm_sec/10][4-j+5]?TimeColor:0;
+        Dates[218+j]=Code3x5[timeinfo.tm_sec/10][4-j+10]?TimeColor:0;
+
+
+        Dates[193+j]=Code3x5[10][j+5]?TimeColor:0;
+
+        Dates[170+j]=Code3x5[timeinfo.tm_min%10][4-j]?TimeColor:0;
+        Dates[177+j]=Code3x5[timeinfo.tm_min%10][4-j+5]?TimeColor:0;
+        Dates[186+j]=Code3x5[timeinfo.tm_min%10][4-j+10]?TimeColor:0;
+
+        Dates[145+j]=Code3x5[timeinfo.tm_min/10][j]?TimeColor:0;
+        Dates[154+j]=Code3x5[timeinfo.tm_min/10][j+5]?TimeColor:0;
+        Dates[161+j]=Code3x5[timeinfo.tm_min/10][j+10]?TimeColor:0;
+
+        Dates[138+j]=Code3x5[10][j+5]?TimeColor:0;
+
+        Dates[113+j]=Code3x5[timeinfo.tm_hour%10][j]?TimeColor:0;
+        Dates[122+j]=Code3x5[timeinfo.tm_hour%10][j+5]?TimeColor:0;
+        Dates[129+j]=Code3x5[timeinfo.tm_hour%10][j+10]?TimeColor:0;
+
+        Dates[90+j]=Code3x5[timeinfo.tm_hour/10][4-j]?TimeColor:0;
+        Dates[97+j]=Code3x5[timeinfo.tm_hour/10][4-j+5]?TimeColor:0;
+        Dates[106+j]=Code3x5[timeinfo.tm_hour/10][4-j+10]?TimeColor:0;
+    }*/
 }
  

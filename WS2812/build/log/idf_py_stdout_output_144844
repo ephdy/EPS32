@@ -1,0 +1,46 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/RMT_WS2812.c.obj
+[5/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/WS2812.c.obj
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c: In function 'initialize_sntp':
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:271:5: warning: 'sntp_setoperatingmode' is deprecated: use esp_sntp_setoperatingmode() instead [-Wdeprecated-declarations]
+  271 |     sntp_setoperatingmode(SNTP_OPMODE_POLL);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.h:32,
+                 from /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:1:
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:249:6: note: declared here
+  249 | void sntp_setoperatingmode(u8_t operating_mode)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:272:5: warning: 'sntp_setservername' is deprecated: use esp_sntp_setservername() instead [-Wdeprecated-declarations]
+  272 |     sntp_setservername(0, "pool.ntp.org");
+      |     ^~~~~~~~~~~~~~~~~~
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:263:6: note: declared here
+  263 | void sntp_setservername(u8_t idx, const char *server)
+      |      ^~~~~~~~~~~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:273:5: warning: 'sntp_init' is deprecated: use esp_sntp_init() instead [-Wdeprecated-declarations]
+  273 |     sntp_init();
+      |     ^~~~~~~~~
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:269:6: note: declared here
+  269 | void sntp_init(void)
+      |      ^~~~~~~~~
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c: In function 'obtain_time':
+/home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:283:5: warning: 'sntp_servermode_dhcp' is deprecated: use esp_sntp_servermode_dhcp() instead [-Wdeprecated-declarations]
+  283 |     sntp_servermode_dhcp(1);
+      |     ^~~~~~~~~~~~~~~~~~~~
+/home/ep_hdy/esp/esp-idf/components/lwip/include/apps/esp_sntp.h:255:6: note: declared here
+  255 | void sntp_servermode_dhcp(int set_servers_from_dhcp)
+      |      ^~~~~~~~~~~~~~~~~~~~
+[6/10] Linking C static library esp-idf/main/libmain.a
+[7/10] Generating ld/sections.ld
+[8/10] Linking CXX executable WS2812.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+[10/10] cd /home/ep_hdy/Code/ESP32/WS2812/build/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ep_hdy/Code/ESP32/WS2812/build/partition_table/partition-table.bin /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+WS2812.bin binary size 0xcb1a0 bytes. Smallest app partition is 0x100000 bytes. 0x34e60 bytes (21%) free.

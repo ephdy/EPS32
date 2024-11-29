@@ -1,0 +1,144 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400dbc57: task_wdt_timeout_handling at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x400dc01c: task_wdt_isr at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x4008359d: _xt_lowint1 at /home/ep_hdy/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d6715: uart_tx_char at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:163
+0x400d6edf: uart_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:218
+0x400d5d47: console_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d58d2: esp_vfs_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x40142d09: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40150343: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4014fd06: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40143179: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4015b7c9: esp_log_writev at /home/ep_hdy/esp/esp-idf/components/log/log.c:212
+0x4009020d: esp_log_write at /home/ep_hdy/esp/esp-idf/components/log/log.c:222
+0x400d704d: Mode_1 at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:139 (discriminator 1)
+0x400d70fd: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:217
+0x4015adf7: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400dbc57: task_wdt_timeout_handling at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x400dc01c: task_wdt_isr at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x4008359d: _xt_lowint1 at /home/ep_hdy/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d6715: uart_tx_char at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:163
+0x400d6edf: uart_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:218
+0x400d5d47: console_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d58d2: esp_vfs_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x40142d09: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40150343: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4014fd06: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40143179: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4015b7c9: esp_log_writev at /home/ep_hdy/esp/esp-idf/components/log/log.c:212
+0x4009020d: esp_log_write at /home/ep_hdy/esp/esp-idf/components/log/log.c:222
+0x400d704d: Mode_1 at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:139 (discriminator 1)
+0x400d70fd: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:217
+0x4015adf7: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400dbc57: task_wdt_timeout_handling at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x400dc01c: task_wdt_isr at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x4008359d: _xt_lowint1 at /home/ep_hdy/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d671f: uart_ll_get_txfifo_len at /home/ep_hdy/esp/esp-idf/components/hal/esp32/include/hal/uart_ll.h:408
+ (inlined by) uart_tx_char at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:165
+0x400d6edf: uart_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:218
+0x400d5d47: console_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d58d2: esp_vfs_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x40142d09: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40150343: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4014fd06: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40143179: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4015b7c9: esp_log_writev at /home/ep_hdy/esp/esp-idf/components/log/log.c:212
+0x4009020d: esp_log_write at /home/ep_hdy/esp/esp-idf/components/log/log.c:222
+0x400d704d: Mode_1 at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:139 (discriminator 1)
+0x400d70fd: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:217
+0x4015adf7: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400dbc57: task_wdt_timeout_handling at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x400dc01c: task_wdt_isr at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x4008359d: _xt_lowint1 at /home/ep_hdy/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d6715: uart_tx_char at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:163
+0x400d6edf: uart_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:218
+0x400d5d47: console_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d58d2: esp_vfs_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x40142d09: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40150343: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4014fd06: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40143179: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4015b7c9: esp_log_writev at /home/ep_hdy/esp/esp-idf/components/log/log.c:212
+0x4009020d: esp_log_write at /home/ep_hdy/esp/esp-idf/components/log/log.c:222
+0x400d704d: Mode_1 at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:139 (discriminator 1)
+0x400d70fd: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:217
+0x4015adf7: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400dbc57: task_wdt_timeout_handling at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x400dc01c: task_wdt_isr at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x4008359d: _xt_lowint1 at /home/ep_hdy/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d6715: uart_tx_char at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:163
+0x400d6edf: uart_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:218
+0x400d5d47: console_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d58d2: esp_vfs_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x40142d09: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40150343: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4014fd06: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40143179: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4015b7c9: esp_log_writev at /home/ep_hdy/esp/esp-idf/components/log/log.c:212
+0x4009020d: esp_log_write at /home/ep_hdy/esp/esp-idf/components/log/log.c:222
+0x400d704d: Mode_1 at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:139 (discriminator 1)
+0x400d70fd: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:217
+0x4015adf7: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400dbc57: task_wdt_timeout_handling at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x400dc01c: task_wdt_isr at /home/ep_hdy/esp/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x4008359d: _xt_lowint1 at /home/ep_hdy/esp/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d6715: uart_tx_char at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:163
+0x400d6edf: uart_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_uart.c:218
+0x400d5d47: console_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs_console.c:73 (discriminator 1)
+0x400d58d2: esp_vfs_write at /home/ep_hdy/esp/esp-idf/components/vfs/vfs.c:482 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x40142d09: __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40150343: __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4014fd06: _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40143179: vprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x4015b7c9: esp_log_writev at /home/ep_hdy/esp/esp-idf/components/log/log.c:212
+0x4009020d: esp_log_write at /home/ep_hdy/esp/esp-idf/components/log/log.c:222
+0x400d704d: Mode_1 at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:139 (discriminator 1)
+0x400d70fd: app_main at /home/ep_hdy/Code/ESP32/WS2812/main/WS2812.c:217
+0x4015adf7: main_task at /home/ep_hdy/esp/esp-idf/components/freertos/app_startup.c:208
+0x4008a781: vPortTaskWrapper at /home/ep_hdy/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

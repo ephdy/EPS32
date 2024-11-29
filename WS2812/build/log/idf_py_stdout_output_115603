@@ -1,0 +1,69 @@
+[1/5] cd /home/ep_hdy/Code/ESP32/WS2812/build/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ep_hdy/Code/ESP32/WS2812/build/partition_table/partition-table.bin /home/ep_hdy/Code/ESP32/WS2812/build/WS2812.bin
+WS2812.bin binary size 0xcaa80 bytes. Smallest app partition is 0x100000 bytes. 0x35580 bytes (21%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/esp-idf/esptool_py && /home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/ep_hdy/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ep_hdy/Code/ESP32/WS2812/build/bootloader/bootloader.bin
+Bootloader binary size 0x6860 bytes. 0x7a0 bytes (7%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/ep_hdy/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ep_hdy/esp/esp-idf -D "SERIAL_TOOL=/home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/ep_hdy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ep_hdy/Code/ESP32/WS2812/build -P /home/ep_hdy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 WS2812.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/ttyUSB0
+Connecting.........
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:db:a7:31:d8:3c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000dafff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 26720 bytes to 16343...
+Writing at 0x00001000... (100 %)
+Wrote 26720 bytes (16343 compressed) at 0x00001000 in 0.7 seconds (effective 294.7 kbit/s)...
+Hash of data verified.
+Compressed 830080 bytes to 528322...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001d01b... (6 %)
+Writing at 0x000251b2... (9 %)
+Writing at 0x00029ea1... (12 %)
+Writing at 0x00034795... (15 %)
+Writing at 0x0003b0a0... (18 %)
+Writing at 0x00040af2... (21 %)
+Writing at 0x00046695... (24 %)
+Writing at 0x0004c258... (27 %)
+Writing at 0x00051ed7... (30 %)
+Writing at 0x00057817... (33 %)
+Writing at 0x0005d4c9... (36 %)
+Writing at 0x00063147... (39 %)
+Writing at 0x00068cf8... (42 %)
+Writing at 0x0006ea68... (45 %)
+Writing at 0x000744a2... (48 %)
+Writing at 0x0007a4b5... (51 %)
+Writing at 0x0007f89c... (54 %)
+Writing at 0x00084d52... (57 %)
+Writing at 0x00089fa9... (60 %)
+Writing at 0x0008f747... (63 %)
+Writing at 0x00094e42... (66 %)
+Writing at 0x0009aa9d... (69 %)
+Writing at 0x000a0237... (72 %)
+Writing at 0x000a5f5a... (75 %)
+Writing at 0x000abaa4... (78 %)
+Writing at 0x000b1262... (81 %)
+Writing at 0x000b75a7... (84 %)
+Writing at 0x000c2215... (87 %)
+Writing at 0x000c7e82... (90 %)
+Writing at 0x000cdcd7... (93 %)
+Writing at 0x000d3ec2... (96 %)
+Writing at 0x000d90fa... (100 %)
+Wrote 830080 bytes (528322 compressed) at 0x00010000 in 12.5 seconds (effective 530.8 kbit/s)...
+
+A fatal error occurred: MD5Sum command returned unexpected result: b'ets Jul 29 2019 12:21:46\r\n\r\nrst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))\r\nwaiting for download\r\n\x01\x08\x04\x00\x07\x12UU\x00\x00'
+FAILED: CMakeFiles/flash /home/ep_hdy/Code/ESP32/WS2812/build/CMakeFiles/flash 
+cd /home/ep_hdy/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ep_hdy/esp/esp-idf -D "SERIAL_TOOL=/home/ep_hdy/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/ep_hdy/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ep_hdy/Code/ESP32/WS2812/build -P /home/ep_hdy/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

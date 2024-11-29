@@ -30,6 +30,7 @@
 #include "esp_netif_sntp.h"
 #include "lwip/ip_addr.h"
 #include "esp_sntp.h"
+#include "esp_sleep.h"
 
 #define TimeColor               DeepSkyBlue
 #define WeekColor_0             SeaGreen
